@@ -14,10 +14,6 @@ function App() {
     <BrowserRouter>
       <Routes>
        <Route path="/" element={<Home />} />
-        {/*<Route
-          path="/ventas-dashboard"
-          element={<VentasDashboard />}
-        /> */}
       </Routes>
   </BrowserRouter>
   );
