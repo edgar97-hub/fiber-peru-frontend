@@ -44,4 +44,8 @@ export const menuItems = [
     title: 'contacto',
     url: '/about',
   },
+  {
+    title: 'mi portal win',
+    url: '/',
+  },
 ];
