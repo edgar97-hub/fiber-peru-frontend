@@ -43,12 +43,12 @@ function Services() {
                 </Stack>
 
                 <div className="moreService">Solicitar</div>
-                 <MouseParticles
+                 {/**<MouseParticles
           g={1}
           color="random"
           cull="MuiSvgIcon-root,MuiButton-root"
           level={6}
-        />
+        /> */}
             </div>
             <div className="service">
                 <div className="serviceImg"></div>

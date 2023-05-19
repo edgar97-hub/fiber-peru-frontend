@@ -17,7 +17,9 @@ function PlanBenefits() {
             <h1 className="title">¿CUÁLES SON LOS BENEFICIOS DE
                                                     NUESTROS PLANES?</h1>
             <div className="subtitle">
-                Sin plazo de permanencia ni penalidades
+            Obtenga Internet residencial de alta velocidad
+
+
 
             </div>
         </div>

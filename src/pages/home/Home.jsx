@@ -8,12 +8,13 @@ import WhatsappWidget from "../../components/whatsappWidget/WhatsappWidget";
 import WhyChooseFiber from "../../components/whyChooseFiber/WhyChooseFiber";
 import PlanBenefits from "../../components/planBenefits/PlanBenefits";
 import PlanInfo from "../../components/planInfo/PlanInfo";
+import TermsAndConditions from "../../components/termsAndConditions/TermsAndConditions";
+
 import Footer from "../../components/footer/Footer";
 
 export default function Home() {
     return (
         <div class="wrapper">
-           {/**  <Navbar/> */}
             <Header/>
             <Video />
             <Services />
@@ -21,6 +22,7 @@ export default function Home() {
             <WhyChooseFiber />
             <PlanBenefits />
             <PlanInfo />
+            <TermsAndConditions />
             <Footer />
             <WhatsappWidget />
 

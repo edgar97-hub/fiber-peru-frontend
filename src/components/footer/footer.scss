@@ -1,35 +1,68 @@
 .footerWrapper {
-       background-color: #d3d9e9;
     padding-top: 20px;
-    border: 1px solid #0d0d0f;
-    background-color: var(--brown);
+    //border: 5px solid #0d0d0f;
+    background-color: #301d19;
+
+    .linksWrapper .items:not(:first-child) {
+        border-right: 1.5px solid rgb(172, 172, 168);
+
+        @media screen and (max-width: 1130px) {
+            border-right: 0;
+          }
+
+    }
+    .linksWrapper .items:last-child {
+        border-right: 0px;
+        @media screen and (max-width: 1130px) {
+            border-right: 0;
+        }
+    }
+    .linksWrapper .items:first-child {
+        @media screen and (max-width: 600px) {
+            min-width: 100% ;
+        }
+    }
 
     .linksWrapper {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        // border: 1px solid #0d0d0f;
+        //border: 1px solid #0d0d0f;
         margin-bottom: 20px;
-
+        justify-content: center;
+        
+        
         .items {
             display: flex;
             flex-direction: column;
-            width: 50%;
-            //   border: 1px solid #0d0d0f;
+            min-width: 15% ;
+            border: 1px solid #0d0d0f;
+            padding-top: 40px !important;
             align-items: center;
-            justify-content: center;
+            @media screen and (max-width: 1130px) {
+                min-width: 30% ;
+            }
+            .img {
+                width: 300px;
+            }
 
             .title {
-                color: #315db7;
-                font-size: 1rem;
+                //border: 1px solid #0d0d0f;
+                color: white;
+                font-size: 13px;
                 margin-bottom: 0.5rem;
+                font-weight: bolder;
+                width: 80%;
+
             }
 
             .link {
-                text-align: center;
-                min-width: 80%;
-                font-size: 15px;
-                color: #708198;
+                //border: 1px solid #0d0d0f;
+                padding: 3px;
+                width: 80%;
+                font-size: 13px;
+                color: white;
+                text-align: start;  
                 cursor: pointer;
 
                 &:hover {
@@ -47,6 +80,9 @@
         justify-content: center;
         padding: 25px;
 
+        .websiteRights {
+                color: white;
+        }
         .socialIcons {
             display: flex;
             flex-direction: row;
@@ -57,7 +93,7 @@
             .socialIconLink {
                 padding: 15px;
                 cursor: pointer;
-                color: rgb(41, 39, 39);
+                color: rgb(238, 229, 229);
             }
         }
     }
