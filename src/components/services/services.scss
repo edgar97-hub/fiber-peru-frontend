@@ -8,29 +8,35 @@
     flex-wrap: wrap;
     justify-content: center;
       // background: #e7e8eb;
-     //border: 1px solid #0d0d0f;
+    //border: 1px solid #0d0d0f;
   }
-  
+ 
+
   .www{
     display: flex;
   }
-  .wrapperTitle {
+  .wrapper-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-width: 100%;
-     margin-bottom: 50px;
+    margin-bottom: 50px;
     //border: 1px solid #0d0d0f;
-  
+
+
     .title {
       color: #315db7;
-      font-size: 38px;
+      font-size: 35px;
       font-weight: 500;
       margin-bottom: 2rem;
       text-align: center;
-      padding: auto;
-      // border: 1px solid #0d0d0f;
+      padding-left: 55px;
+      padding-right: 55px;
+      //border: 1px solid #0d0d0f;
+      @media screen and (max-width: 960px) {
+        font-size: 20px;
+      }
     }
   
     .subtitle {
@@ -39,10 +45,35 @@
       min-width: 80%;
       font-size: 25px;
       color: #708198;
+      padding-left: 25px;
+      padding-right: 25px;
+
+      @media screen and (max-width: 960px) {
+        font-size: 16px;        
+        
+      }
     }
   }
+  #nokey{
+    
+    height:100px;
+    //border: 5px solid #0d0d0f;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    display: inline;
+    background-color: linear-gradient(#333, #151519);
+
+  }
+
   
-  .service {
+  #test {
+
+   
+    position: relative;
+    overflow: hidden;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,14 +81,13 @@
     
     padding: 1.5%;
     width: 15%;
-    // border: 0.5px solid #0d0d0f;
+    //border: 0.5px solid #0d0d0f;
     box-shadow: 0px 0px 0px 0px grey !important;
 
     //box-shadow: 0.5px 3px 3px 0.5px grey;
-      border: 0.1px solid #dcdce2;
-
+    border: 1.1px solid #dcdce2;
     border-radius: 9px;
-  
+
     &:hover {
       transform: scale(1.06);
       transition: all 0.3s ease-out;
@@ -104,9 +134,22 @@
         color: #b85858;
       }
     }
+    @media screen and (max-width: 1350px) {
+      color: #708198;
+      width: 25%;
+    }
+
     @media screen and (max-width: 960px) {
-      width: 60%;
-      margin-bottom: 7%;
-      padding: 1.5%;
+      width: 40%;
+      padding: 1.8%;
+    }
+    @media screen and (max-width: 750px) {
+      width: 50%;
+      padding: 5.5%;
+    }
+
+    @media screen and (max-width: 650px) {
+      width: 70%;
+      padding: 5.5%;
     }
   }

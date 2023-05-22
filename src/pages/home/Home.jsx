@@ -1,4 +1,4 @@
-import {Navbar} from "../../components";
+import { Navbar } from "../../components";
 import Video from "../../video/Video";
 import Header from "../../components/Header";
 import Services from "../../components/services/Services";
@@ -9,16 +9,17 @@ import WhyChooseFiber from "../../components/whyChooseFiber/WhyChooseFiber";
 import PlanBenefits from "../../components/planBenefits/PlanBenefits";
 import PlanInfo from "../../components/planInfo/PlanInfo";
 import TermsAndConditions from "../../components/termsAndConditions/TermsAndConditions";
+import GooleMapsTest from "../../components/googlemaps/GooleMapsTest";
 
 import Footer from "../../components/footer/Footer";
 
 export default function Home() {
     return (
         <div class="wrapper">
-            <Header/>
+            <Header />
             <Video />
             <Services />
-            <GoogleMap />
+            <GooleMapsTest />
             <WhyChooseFiber />
             <PlanBenefits />
             <PlanInfo />
@@ -28,4 +29,4 @@ export default function Home() {
 
         </div>
     );
-    }
+}
