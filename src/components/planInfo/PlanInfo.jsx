@@ -41,22 +41,21 @@ function PlanInfo() {
                         </div>
                     </div> */}
 
-<div className="itemChooseUs">
-                        <div className="itemTitleChooseUs">
-                        Sin planes de compromiso anual
-                        </div>
-                        <div className="itemDescriptionChooseUs">
-                        Nunca te quedes encerrado en un plan. No tener contratos anuales es parte de la libertad que experimentarás con Fiber peru.
-                        </div>
-                    </div> 
                     <div className="itemChooseUs">
                         <div className="itemTitleChooseUs">
-                        Sin límites de datos                        </div>
+                            Sin planes de compromiso anual
+                        </div>
                         <div className="itemDescriptionChooseUs">
-                        Disfruta de la diversión sin fin en línea. Con datos mensuales ilimitados, puede conectarse todo lo que quiera, cuando quiera, sin cargos por excedentes.</div>
-                    </div> 
-
-              
+                            Nunca te quedes encerrado en un plan. No tener contratos anuales es parte de la libertad que experimentarás con Fiber peru.
+                        </div>
+                    </div>
+                    <div className="itemChooseUs">
+                        <div className="itemTitleChooseUs">
+                            Sin límites de datos
+                        </div>
+                        <div className="itemDescriptionChooseUs">
+                            Disfruta de la diversión sin fin en línea. Con datos mensuales ilimitados, puede conectarse todo lo que quiera, cuando quiera, sin cargos por excedentes.</div>
+                    </div>
 
 
                 </div>
