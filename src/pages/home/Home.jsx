@@ -4,12 +4,13 @@ import Header from "../../components/Header";
 import Services from "../../components/services/Services";
 import ParticlesDemo from "./Particles";
 import GoogleMap from "../../components/googlemaps/GoogleMap";
-import WhatsappWidget from "../../components/whatsappWidget/WhatsappWidget";
+//import WhatsappWidget from "../../components/whatsappWidget/WhatsappWidget";
 import WhyChooseFiber from "../../components/whyChooseFiber/WhyChooseFiber";
 import PlanBenefits from "../../components/planBenefits/PlanBenefits";
 import PlanInfo from "../../components/planInfo/PlanInfo";
 import TermsAndConditions from "../../components/termsAndConditions/TermsAndConditions";
 import GooleMapsTest from "../../components/googlemaps/GooleMapsTest";
+import WhatsAppWidget from "../../components/WhatsappTest/index";
 
 import Footer from "../../components/footer/Footer";
 
@@ -25,8 +26,7 @@ export default function Home() {
             <PlanInfo />
             <TermsAndConditions />
             <Footer />
-            <WhatsappWidget />
-
+        |   {/**<WhatsappWidget />*/}
         </div>
     );
 }
