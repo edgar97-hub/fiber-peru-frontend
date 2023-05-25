@@ -8,9 +8,15 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import DevicesIcon from '@mui/icons-material/Devices';
+import IconOnline from "../../../images/online.jpg";
+import IconAgente from "../../../images/agentes2.png";
+import IconBanco from "../../../images/bancos.webp";
 import IconYape from "../../../images/logo.png";
+
 import Bank from "./Bank";
 import Agents from "./Agents";
+import Online from "./Online";
+import Yape from "./Yape";
 
 function TabPanel(props) {
   const {
@@ -58,11 +64,13 @@ export default function WheretoPayServices() {
 
   return (<Box sx={
     {
-      width: '100%',
-      //border: "5px solid #0d0d0f",
+      //border: "1px solid #0d0d0f",
       alignItems: "center",
       justifyContent: "center",
-      paddingLeft: "300px"
+      //width: { xs: 210, sm: 280, md: 250, lg: 250 },
+      width: '100%',
+      //paddingLeft: "300px",
+      paddingLeft:{ xs: 3, sm: 10, md: "200px", lg: "100px" },
 
     }
   }>
@@ -71,11 +79,9 @@ export default function WheretoPayServices() {
         borderBottom: 1,
         borderColor: 'divider',
         width: '100%',
-        //border: "1px solid #0d0d0f"
-
+        //border: "1px solid #0d0d0f",
       }
     }>
-			<Box>
 			 
 
 		<Typography  variant="h4"  mt={2} ml={4}  sx={
@@ -84,29 +90,18 @@ export default function WheretoPayServices() {
                     }
                 }>Dónde pagar tu recibo?</Typography>
 
-			</Box>
-      <Tabs value={value}
+      <Tabs value={value}   variant="scrollable"
+      scrollButtons
+      allowScrollButtonsMobile
         onChange={handleChange}
         >
-        <Tab icon={<AccountBalanceIcon sx={
-                    {
-                        fontSize: "50px"
-                    }
-                } />}
-          label="Bancos"
-          {...a11yProps(0)} sx={ { padding:"50px" }}/>
-        <Tab icon={<SupportAgentIcon  sx={
-                    {
-                        fontSize: "50px"
-                    }
-                }/>}
+        <Tab 
+          label="Bancos"  icon={<img src={IconBanco} height={65} width={55}  />}
+          {...a11yProps(0)}   sx={ { padding:"50px" }}/>
+        <Tab icon={<img src={IconAgente} height={65} width={85}  />}
           label="Agentes"
           {...a11yProps(1)} sx={ { padding:"50px" }}/>
-        <Tab icon={<DevicesIcon  sx={
-                    {
-                        fontSize: "50px"
-                    }
-                }/>}
+        <Tab icon={<img src={IconOnline} height={65} width={85}  />}
           label="En linea"
           {...a11yProps(2)} sx={ { padding:"50px" }}/>
         <Tab icon={<img src={IconYape} height={55} width={55}  />}
@@ -124,11 +119,11 @@ export default function WheretoPayServices() {
     </TabPanel>
     <TabPanel value={value}
       index={2}>
-      Item Three
+			<Online/>
     </TabPanel>
 		<TabPanel value={value}
       index={3}>
-      Item Three
+			<Yape />
     </TabPanel>
   </Box>);
 }

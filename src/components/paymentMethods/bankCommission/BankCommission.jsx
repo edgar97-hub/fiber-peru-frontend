@@ -8,6 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import {Padding} from '@mui/icons-material';
 
 function createData(name, calories, fat, carbs, protein) {
   return {
@@ -76,135 +77,171 @@ const columns = [
 
 
 export default function BasicTable() {
-  return (<Box sx={
-    {
-      minWidth: "90%",
-      display: "flex",
-      flexDirection: "row",
-      flexWrap: "wrap",
-      //border: "1px solid #0d0d0f",
-      // alignItems: "center",
-      justifyContent: "center",
-      backgroundColor: "#efefef",
-      borderRadius: "9px",
-      paddingTop: "45px",
-			paddingLeft: "45px",
-			paddingRight: "45px",
-      margin: "3px"
-    }
-  }>
+  return (
     <Box sx={
       {
-        width: "30%",
+        minWidth: "90%",
         display: "flex",
-        flexDirection: "column",
+        flexDirection: "row",
+        flexWrap: "wrap",
         //border: "1px solid #0d0d0f",
         // alignItems: "center",
-        // justifyContent: "center",
-        marginRight: "25px"
+        justifyContent: "center",
+        backgroundColor: "#efefef",
+        // borderRadius: "9px",
+        paddingTop: {
+          xs: "9px", 
+          sm: "9px",
+          sm: "9px",
+          lg: "25px"
+        },
+        paddingBottom: "45px",
+        paddingLeft: "45px",
+        paddingRight: "45px",
+        // margin: "3px"
       }
     }>
+      <Box sx={
+        {
+          width: {
+            sm: "100%",
+            lg: "40%"
+          },
+          display: "flex",
+          flexDirection: "column",
+          //border: "1px solid #0d0d0f",
+          // alignItems: "center",
+          // justifyContent: "center",
+          marginRight: "25px",
+          //padding: "10px",
+          padding: {
+            xs: "30px", 
+            sm: "30px",
+            sm: "30px",
+            lg: "10px"
+          },
 
-
-      <Typography variant="h8"
-
-        sx={
-          {
-            color: '#9CA3AF',
-            whiteSpace: 'pre-line'
-          }
-      }>Conoce las comisiones en entidades bancarias</Typography>
-      <Typography variant="h8"
-        sx={
-          {
-            color: '#301d19',
-            whiteSpace: 'pre-line',
-            fontWeight: "500"
-
-          }
-      }> {'\n'}
-        &#8226; Te brindamos la información necesaria para que realices tus pagos sin problema. Por eso, aquí te mostramos las comisiones de acuerdo a la entidad bancaria donde realizas el pago de tu recibo.
-      </Typography>
-      <Typography variant="h8"
-        sx={
-          {
-            color: '#301d19',
-            fontWeight: "500",
-						marginTop:"10px",
-          }
+        }
       }>
-        &#8226;*El horario de atención de los agentes se encuentra bajo disponibilidad de los establecimientos.
-                                        *No olvides brindar tu código de pago sin los 00 de la izquierda (está ubicado en la parte superior derecha de tu recibo)
-      </Typography>
-    </Box>
 
-    <TableContainer sx={
-      {width: "40%"}
-    }>
-      <Table stickyHeader aria-label="sticky table" size="small">
-        <TableHead>
-          <TableRow>
-            <TableCell align="center"
-              colSpan={1}
-              sx={
-                {
-                  backgroundColor: "#308ce9",
-                  borderRight: "0.5px solid  white",
-                  color: "white"
-                }
-            }>Entidad bancaria</TableCell>
-            <TableCell align="center"
-              colSpan={4}
-              sx={
-                {
-                  backgroundColor: "#308ce9",
-                  color: "white",
-                  borderRight: "0.5px solid  white"
-                }
-            }>
-              Comisión al cliente
-            </TableCell>
-          </TableRow>
-          <TableRow> {
-            columns.map((column) => (<TableCell key={
-                column.id
-              }
-              align={
-                column.align
-              }
-              style={
-                { // top: 57,
-                  minWidth: column.minWidth,
-                  backgroundColor: "#308ce9",
-                  // bordertop: "0.5px solid  white",
-                  borderRight: "0.5px solid  white",
-                  color: "white"
-                }
-            }> {
-              column.label
-            } </TableCell>))
-          } </TableRow>
-        </TableHead>
-        <TableBody> {
-          rows.map((row, index) => {
-            return (<TableRow hover role="checkbox"
-              tabIndex={-1}
-              key={index}> {
-              columns.map((column) => {
-                const value = row[column.id];
-                return (<TableCell key={
+
+        <Typography variant="h8"
+
+          sx={
+            {
+              color: '#9CA3AF',
+              whiteSpace: 'pre-line'
+            }
+        }>Conoce las comisiones en entidades bancarias</Typography>
+        <Typography variant="h8"
+          sx={
+            {
+              color: '#301d19',
+              whiteSpace: 'pre-line',
+              fontWeight: "500"
+
+            }
+        }>
+          {'\n'}
+          &#8226; Te brindamos la información necesaria para que realices tus pagos sin problema. Por eso, aquí te mostramos las comisiones de acuerdo a la entidad bancaria donde realizas el pago de tu recibo.
+        </Typography>
+        <Typography variant="h8"
+          sx={
+            {
+              color: '#301d19',
+              fontWeight: "500",
+              marginTop: "10px"
+            }
+        }>
+          &#8226;*El horario de atención de los agentes se encuentra bajo disponibilidad de los establecimientos.
+                 *No olvides brindar tu código de pago sin los 00 de la izquierda (está ubicado en la parte superior derecha de tu recibo)
+        </Typography>
+      </Box>
+
+      <TableContainer sx={
+        {
+          //border: "1px solid #0d0d0f",
+          width: {
+            sm: "100%",
+            lg: "40%"
+          }
+
+        }
+      }>
+        <Table stickyHeader aria-label="sticky table" size="small">
+          <TableHead>
+            <TableRow>
+              <TableCell align="center"
+                colSpan={1}
+                sx={
+                  {
+                    backgroundColor: "#308ce9",
+                    borderRight: "0.5px solid  white",
+                    color: "white"
+                  }
+              }>Entidad bancaria</TableCell>
+              <TableCell align="center"
+                colSpan={4}
+                sx={
+                  {
+                    backgroundColor: "#308ce9",
+                    color: "white",
+                    borderRight: "0.5px solid  white"
+                  }
+              }>
+                Comisión al cliente
+              </TableCell>
+            </TableRow>
+            <TableRow> {
+              columns.map((column) => (
+                <TableCell key={
                     column.id
                   }
                   align={
                     column.align
-                }> {
-                  column.format && typeof value === "number" ? column.format(value) : value
-                } </TableCell>);
-              })
-            } </TableRow>);
-          })
-        } </TableBody>
-      </Table>
-    </TableContainer>
-  </Box>);
+                  }
+                  style={
+                    { // top: 57,
+                      minWidth: column.minWidth,
+                      backgroundColor: "#308ce9",
+                      // bordertop: "0.5px solid  white",
+                      borderRight: "0.5px solid  white",
+                      color: "white"
+                    }
+                }>
+                  {
+                  column.label
+                } </TableCell>
+              ))
+            } </TableRow>
+          </TableHead>
+          <TableBody> {
+            rows.map((row, index) => {
+              return (
+                <TableRow hover role="checkbox"
+                  tabIndex={-1}
+                  key={index}>
+                  {
+                  columns.map((column) => {
+                    const value = row[column.id];
+                    return (
+                      <TableCell key={
+                          column.id
+                        }
+                        align={
+                          column.align
+                      }>
+                        {
+                        column.format && typeof value === "number" ? column.format(value) : value
+                      } </TableCell>
+                    );
+                  })
+                } </TableRow>
+              );
+            })
+          } </TableBody>
+        </Table>
+      </TableContainer>
+    </Box>
+  );
 }

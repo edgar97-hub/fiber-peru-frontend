@@ -10,7 +10,7 @@ const Video = () => {
 
 		const intervalId = setInterval(() => {
 			setCurrentIndex((preve) => !preve);
-		}, 2000)
+		}, 5000)
 
 		return () => clearInterval(intervalId);
 	}, [])

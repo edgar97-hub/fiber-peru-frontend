@@ -7,7 +7,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-      // background: #e7e8eb;
+    // background: #e7e8eb;
     //border: 1px solid #0d0d0f;
   }
  
@@ -24,13 +24,15 @@
     margin-bottom: 50px;
     //border: 1px solid #0d0d0f;
     .title {
-      color: #315db7;
+      color: #04c9e1;
       font-size: 35px;
       font-weight: 500;
       margin-bottom: 2rem;
       text-align: center;
       padding-left: 55px;
       padding-right: 55px;
+      font-weight: 600;
+
       //border: 1px solid #0d0d0f;
       @media screen and (max-width: 960px) {
         font-size: 20px;
@@ -42,7 +44,11 @@
       text-align: center;
       min-width: 80%;
       font-size: 25px;
-      color: #708198;
+      color: #FF00FF;
+      box-sizing: border-box;
+      //font-family: "MADETommySoftBold";
+      font-weight: 500;
+      line-height: 1.2;
       padding-left: 25px;
       padding-right: 25px;
 
@@ -119,7 +125,7 @@
     .title {
       text-align: center;
       text-transform: capitalize;
-      color: #59687c;
+      color: #d60cb8;
       font-family: inherit;
       font-size: 1.25rem;
       line-height: 1.2rem;
@@ -133,7 +139,7 @@
     .sub-title{
       text-align: center;
       text-transform: capitalize;
-      color: #59687c;
+      color: #5c585c;
       font-family: inherit;
       font-size: 1.25rem;
       line-height: 1.2rem;
@@ -144,7 +150,7 @@
       z-index: 201;
     }
     .precio {
-        color: #315db7;
+        color: #80f974;
         text-align: center;
         text-transform: capitalize;
         font-family: inherit;

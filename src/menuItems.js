@@ -42,10 +42,10 @@ export const menuItems = [
 	},
 	{
 		title: 'contacto',
-		url: '/about',
+		url: '/contacto',
 	},
 	{
 		title: 'mi portal win',
-		url: '/',
+		url: '/mi-portal',
 	},
 ];

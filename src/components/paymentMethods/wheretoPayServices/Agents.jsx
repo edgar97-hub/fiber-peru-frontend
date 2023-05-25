@@ -16,7 +16,8 @@ function Agents() {
       display: "flex",
       flexDirection: "row",
       flexWrap: "wrap",
-      // border: "1px solid #0d0d0f",
+       //border: "1px solid #0d0d0f",
+       paddingTop:"10px",
 
     }
   }>
@@ -127,17 +128,22 @@ function Agents() {
 
             }
         }> {'\n'}
-          &#8226; Ventanilla
+          &#8226; Efectivo
         </Typography>
         <Typography variant="h8"
           sx={
             {
-              color: '#301d19',
-              whiteSpace: 'pre-line'
+              color: '#9CA3AF',
+              whiteSpace: 'pre-line',
+              fontSize: "15px !important",
+              color: "#301d19",
+              boxSizing: "border-box"
+
             }
-        }>
-          Comisión S/1.50
+        }> 
+          &#8226; Tarjeta BCP
         </Typography>
+         
       </Box>
 
 
@@ -174,7 +180,20 @@ function Agents() {
 
             }
         }> {'\n'}
-          &#8226; Ventanilla
+          &#8226; Efectivo
+        </Typography>
+        <Typography variant="h8"
+          sx={
+            {
+              color: '#9CA3AF',
+              whiteSpace: 'pre-line',
+              fontSize: "15px !important",
+              color: "#301d19",
+              boxSizing: "border-box"
+
+            }
+        }> 
+          &#8226; Tarjeta BBVA
         </Typography>
         <Typography variant="h8"
           sx={
@@ -183,7 +202,7 @@ function Agents() {
               whiteSpace: 'pre-line'
             }
         }>
-          Comisión S/4.00
+          Comisión S/1.90 
         </Typography>
       </Box>
 
@@ -218,17 +237,23 @@ function Agents() {
 
             }
         }> {'\n'}
-          &#8226; Ventanilla
+          &#8226; Efectivo
         </Typography>
         <Typography variant="h8"
           sx={
             {
-              color: '#301d19',
-              whiteSpace: 'pre-line'
+              color: '#9CA3AF',
+              whiteSpace: 'pre-line',
+              fontSize: "15px !important",
+              color: "#301d19",
+              boxSizing: "border-box"
+
             }
-        }>
-          Comisión S/0
+        }> 
+          &#8226; Tarjeta Scotiabank
         </Typography>
+
+        
       </Box>
 
       <Box sx={
@@ -253,29 +278,18 @@ function Agents() {
         <img className=""
           src={IconInterbank}
           width="90px"/>
-        <Typography variant="h8"
+          <Typography variant="h8"
           sx={
             {
               color: '#9CA3AF',
               whiteSpace: 'pre-line',
               fontSize: "15px !important",
-              color: "#301d19"
+              color: "#301d19",
+              boxSizing: "border-box"
 
             }
         }> {'\n'}
-          &#8226; Agentes Interbank
-        </Typography>
-        <Typography variant="h8"
-          sx={
-            {
-              color: '#9CA3AF',
-              whiteSpace: 'pre-line',
-              fontSize: "15px !important",
-              color: "#301d19"
-
-            }
-        }>
-          &#8226; APP
+          &#8226; Efectivo
         </Typography>
         <Typography variant="h8"
           sx={
@@ -287,15 +301,25 @@ function Agents() {
               boxSizing: "border-box"
 
             }
+        }> 
+          &#8226; Tarjeta Scotiabank
+        </Typography>
+        <Typography variant="h8"
+          sx={
+            {
+              color: '#301d19',
+              whiteSpace: 'pre-line'
+            }
         }>
-          &#8226; Web
+          Comisión S/3.00
         </Typography>
       </Box>
     </Box>
 
     <Box sx={
       {
-        width: "15%",
+        width: "80%",
+        paddingTop:"100px",
         display: "flex",
         flexDirection: "column",
         //border: "1px solid #0d0d0f",
@@ -307,7 +331,8 @@ function Agents() {
       <PictureAsPdfIcon sx={
         {
           fontSize: "50px",
-          color: "#315db7"
+          color: "#315db7",
+          cursor: "pointer"
         }
       }/>
       <Typography variant="h8"

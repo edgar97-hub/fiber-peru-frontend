@@ -8,17 +8,21 @@ import {
   Switch,
   Outlet
 } from "react-router-dom";
-import { Home, PaymentMethods} from "./pages";
+import {Home, PaymentMethods, Contac} from "./pages";
 
 function App() {
-  return (<BrowserRouter>
-    <Routes>
-      <Route path="/"
-        element={<Home/>}/>
-      <Route path="/formas-de-pago"
-        element={<PaymentMethods/>}/>
-    </Routes>
-  </BrowserRouter>);
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/"
+          element={<Home/>}/>
+        <Route path="/formas-de-pago"
+          element={<PaymentMethods/>}/>
+        <Route path="/contacto"
+          element={<Contac/>}/>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

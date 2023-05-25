@@ -9,6 +9,7 @@ import IconInterbank from "../../../images/interbank.svg";
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import IconBancos from "../../../images/bancos.jpg";
 import { Padding } from "@mui/icons-material";
+import "./wheretoPayServices.scss";
 
 function Bank() {
   return (<Box sx={
@@ -16,7 +17,7 @@ function Bank() {
       display: "flex",
       flexDirection: "row",
       flexWrap: "wrap",
-      // border: "1px solid #0d0d0f",
+      //border: "1px solid #0d0d0f",
 
     }
   }>
@@ -26,17 +27,17 @@ function Bank() {
         flexDirection: "column",
         //border: "1px solid #0d0d0f",
         // marginRight:5,
-        width: "50%",
+        //width: "50%",
 				padding:"10px",
 				//paddingLeft:"30px",
-				paddingRight:"35px",
-
+				//paddingRight:"35px",
+        //width:{ xs: 3, sm: 50, md: 50, lg: 50 },
+        width:{ sm: "100%",lg: "50%" },
 
       }
     }>
 
       <Typography variant="h8"
-
         sx={
           {
             color: '#9CA3AF',
@@ -65,16 +66,14 @@ function Bank() {
     </Box>
     <Box sx={
       {
-        //border: "1px solid #0d0d0f",
-        width: "20%"
-
+      //border: "4px solid #0d0d0f",
+        width:{ sm: "100%",lg: "50%" },
       }
     }>
-      <img className="imgChooseUs"
+      <img className="bank-img"
         src={IconBancos}
         alt={""}
-        height="100%"
-        width="400px"/>
+        />
     </Box>
 
     <Box sx={
@@ -82,19 +81,20 @@ function Bank() {
         display: "flex",
         flexDirection: "row",
         flexWrap: "wrap",
-        //border: "4px solid #0d0d0f",
-        width: "40%",
+        //border: "1px solid #0d0d0f",
+        width:{ sm: "100%",lg: "50%" },
         // height:"100%",
-
+        padding:"0px",
+        margin:"0px"
 
       }
     }>
       <Box sx={
         {
-          minWidth: "40%",
+          width: "48%",
           display: "flex",
           flexDirection: "column",
-          // border: "1px solid #0d0d0f",
+          //border: "1px solid #0d0d0f",
           alignItems: "center",
           justifyContent: "center",
           backgroundColor: "#efefef",
@@ -107,7 +107,6 @@ function Bank() {
 
         <img className=""
           src={IconBcp}
-          //height="20%"
           width="70px"
         />
         <Typography variant="h8"
@@ -137,10 +136,10 @@ function Bank() {
 
       <Box sx={
         {
-          minWidth: "40%",
+          width: "48%",
           display: "flex",
           flexDirection: "column",
-          // border: "1px solid #0d0d0f",
+          //border: "1px solid #0d0d0f",
           alignItems: "center",
           justifyContent: "center",
           backgroundColor: "#efefef",
@@ -183,7 +182,7 @@ function Bank() {
 
       <Box sx={
         {
-          minWidth: "40%",
+          width: "48%",
           display: "flex",
           flexDirection: "column",
           // border: "1px solid #0d0d0f",
@@ -227,7 +226,7 @@ function Bank() {
 
       <Box sx={
         {
-          minWidth: "40%",
+          width: "48%",
           display: "flex",
           flexDirection: "column",
           // border: "1px solid #0d0d0f",
@@ -288,8 +287,9 @@ function Bank() {
 
     <Box sx={
       {
-        width: "50%",
+        width:{ xs: "100%",sm: "100%",lg: "50%" },
         display: "flex",
+        paddingTop:"35px",
         flexDirection: "column",
         //border: "1px solid #0d0d0f",
         alignItems: "center",
@@ -300,7 +300,8 @@ function Bank() {
       <PictureAsPdfIcon sx={
         {
           fontSize: "50px",
-          color: "#315db7"
+          color: "#315db7",
+          cursor: "pointer"
         }
       }/>
       <Typography variant="h8"

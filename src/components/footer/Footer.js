@@ -16,11 +16,11 @@ function Footer() {
             <div className="linksWrapper">
 
                 <div className="items">
-                     
 
-<div className="ss"><img className="img"
+
+                    <div className="ss"><img className="img"
                         src={img}
-                        alt={""}/> </div>
+                        alt={""} /> </div>
 
 
                 </div>
@@ -31,35 +31,35 @@ function Footer() {
                     <div className="title">Contacto</div>
                     <div className="link">direccion fiscal</div>
                     <div className="link">Av. Republica de Panama
-                                                Nro. 9999 - 9999</div>
+                        Nro. 9999 - 9999</div>
                     <div className="link">Central
-                                                (+51) 99 999 9999</div>
+                        (+51) 99 999 9999</div>
                     <div className="link">Oficina
-                                                (+51) 09 999 9999</div>
+                        (+51) 09 999 9999</div>
                     <div className="link">Email
-                                                contacto@fiberperu.pe</div>
+                        contacto@fiberperu.pe</div>
 
                 </div>
                 <div className="items">
                     <div className="title">Información de abonados y usuarios</div>
                     <div className="link">
-                    &#8226;
+                        &#8226;
                         Cómo reclamar?</div>
                     <div className="link">
-                    &#8226; Condiciones de uso</div>
+                        &#8226; Condiciones de uso</div>
                     <div className="link">
-                    &#8226; Directiva de reclamos</div>
+                        &#8226; Directiva de reclamos</div>
                     <div className="link">
-                    &#8226; Medios de pago</div>
+                        &#8226; Medios de pago</div>
                     <div className="link">
-                    &#8226; Condiciones de uso del sitio web</div>
+                        &#8226; Condiciones de uso del sitio web</div>
                     <div className="link">
-                    &#8226; Politicas de uso de internet</div>
+                        &#8226; Politicas de uso de internet</div>
                     <div className="link">
-                    &#8226; Informacián básica de que debes conocer</div>
+                        &#8226; Informacián básica de que debes conocer</div>
                     <div className="link">
-                    &#8226; Directiva de reclamos</div>
-                    
+                        &#8226; Directiva de reclamos</div>
+
                 </div>
 
                 <div className="items">
@@ -82,19 +82,19 @@ function Footer() {
                 </div>
                 <div className="socialIcons">
                     <a className="socialIconLink" href="//www.youtube.com/channel/test" rel="noopener noreferrer" target="_blank">
-                        <FaFacebook/>
+                        <FaFacebook />
                     </a>
                     <a className="socialIconLink" href="//www.youtube.com/channel/test" rel="noopener noreferrer" target="_blank">
-                        <FaInstagram/>
+                        <FaInstagram />
                     </a>
                     <a className="socialIconLink" href="//www.youtube.com/channel/test" rel="noopener noreferrer" target="_blank">
-                        <FaYoutube/>
+                        <FaYoutube />
                     </a>
                     <a className="socialIconLink" href="//www.youtube.com/channel/test" rel="noopener noreferrer" target="_blank">
-                        <FaTwitter/>
+                        <FaTwitter />
                     </a>
                     <a className="socialIconLink" href="//www.youtube.com/channel/test" rel="noopener noreferrer" target="_blank">
-                        <FaLinkedin/>
+                        <FaLinkedin />
                     </a>
                 </div>
             </div>
