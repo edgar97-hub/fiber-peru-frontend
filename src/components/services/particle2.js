@@ -1,8 +1,8 @@
 import Canvas2Image from "./canvas2image";
 
-export function startCanvas() {
+export function startCanvas2() {
 
-  var canvas = document.getElementById("nokey");
+  var canvas = document.getElementById("nokey2");
   var can_w = parseInt(canvas.getAttribute("width"));
   var can_h = parseInt(canvas.getAttribute("height"));
   var ctx = canvas.getContext("2d");
@@ -15,8 +15,7 @@ export function startCanvas() {
 
   // can_w = window.innerWidth;
   // can_h = window.innerHeight;
-
-  var color = "19, 113, 225";
+  var color = "45, 18, 84, 1";
   var BALL_NUM = 20;
 
   var ball = {
@@ -33,21 +32,21 @@ export function startCanvas() {
       g: color.split(",")[1],
       b: color.split(",")[2],
     },
-    R = 6.5,
+    R = 5.5,
     balls = [],
     alpha_f = 1.03,
     alpha_phase = 0,
     // Line
     link_line_width = 0.5,
-    dis_limit = 260,
+    dis_limit = 200,
     add_mouse_point = true,
-    mouse_in = false,
+    mouse_in = true,
     mouse_ball = {
-      x: 0,
-      y: 0,
-      vx: 0,
-      vy: 0,
-      r: 0,
+      x: 4,
+      y: 4,
+      vx: 4,
+      vy: 4,
+      r: 4,
       type: "mouse",
     };
 
@@ -189,7 +188,7 @@ export function startCanvas() {
         if (fraction < 1) {
           alpha = (0.1 - fraction).toString();
           //   console.log(alpha);
-          ctx.strokeStyle = "rgba(" + "0, 54, 119" + alpha + ")";
+          ctx.strokeStyle = "rgba(" + "255, 0, 255" + alpha + ")";
           ctx.lineWidth = link_line_width;
 
           ctx.beginPath();
@@ -297,8 +296,9 @@ export function startCanvas() {
   canvas.addEventListener("mouseenter", function () {
     console.log("mouseenter");
     mouse_in = true;
-    //balls.push(mouse_ball);
+    balls.push(mouse_ball);
 
+    window.requestAnimationFrame(render);
 
   });
   canvas.addEventListener("mouseleave", function () {
@@ -317,7 +317,7 @@ export function startCanvas() {
     mouse_ball.x = e.pageX;
     mouse_ball.y = e.pageY;
     // console.log(mouse_ball);
-    // initCanvas();
+     initCanvas();
   });
 
 

@@ -7,7 +7,7 @@ const GooleMapsTest = ({ click, handleclick }) => {
 			<div className="google-maps-title">
 				COBERTURA FIBER-PERU
 			</div>
-			<iframe className="custom-frame" src="http://localhost:3000/google_maps.html" scrolling="no"></iframe>
+			<iframe className="custom-frame" src="/google_maps.html" scrolling="no"></iframe>
 		</>
 	);
 };

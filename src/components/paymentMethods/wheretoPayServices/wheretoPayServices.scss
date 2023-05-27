@@ -1,0 +1,11 @@
+.bank-img{
+	width: 400px ;
+	//border: 1.1px solid #3737f3;
+
+	@media screen and (max-width: 468px) {
+		//width: 100%;
+		width: 300px ;
+
+	}
+
+}

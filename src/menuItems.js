@@ -23,7 +23,7 @@ export const menuItems = [
 		],
 	},
 	{
-		title: 'regiones',
+		title: 'distritos',
 		url: '/about',
 		submenu: [
 			{
@@ -38,14 +38,14 @@ export const menuItems = [
 	},
 	{
 		title: 'formas de pago',
-		url: '/about',
+		url: '/formas-de-pago',
 	},
 	{
 		title: 'contacto',
-		url: '/about',
+		url: '/contacto',
 	},
 	{
 		title: 'mi portal win',
-		url: '/',
+		url: '/mi-portal',
 	},
 ];

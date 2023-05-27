@@ -34,10 +34,6 @@ function TermsAndConditions() {
                 Vigencia del 01/05/2023 hasta el 31/05/2023 para contrataciones de planes a partir de 50 Mbps hasta 300 Mbps a través de nuestros canales de venta oficiales para residentes en Lima, Lambayeque, Piura, La Libertad, y Ancash. Costo de instalación S/0. Precios incluyen IGV. Sujeto a cobertura, prefactibilidad técnica y evaluación crediticia favorable. La velocidad mínima garantizada es de 70% de la velocidad contratada. Ver más en términos y condiciones.
                 </div>
             </div>
-
-           
-
-
         </div>
     );
 }
