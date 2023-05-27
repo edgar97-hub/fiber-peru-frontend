@@ -43,20 +43,20 @@ function Contact() {
   return (
     <div className="wraper-contact">
       <div className="contact-form">
-        <div className="textfield">
+          <div className="textfield">
           Si eres cliente, descubre Mi Portal Fiber-peru
         </div>
         <Button variant="contained"
           sx={
-            {marginLeft: 15}
+            {marginLeft: 0}
         }>Si, soy cliente</Button>
         <div className="textfield">
           Contacta con nuestro equipo para tus dudas o necesidades
-        </div>
+        </div>  
 
-        <FormControl fullWidth size="small"
+        <FormControl  size="small"
           sx={
-            {mt: 2}
+            {mt: 2, width: "70%"}
         }>
           <InputLabel id="demo-simple-select-label">Distrito</InputLabel>
           <Select labelId="demo-simple-select-label"
@@ -72,9 +72,10 @@ function Contact() {
           </Select>
         </FormControl>
 
-        <TextField fullWidth size="small"
+         <TextField  size="small"
           sx={
-            {mt: 2}
+            {mt: 2,
+              width: "70%"}
           }
           label="Nombre"
           name="nombre"
@@ -82,23 +83,23 @@ function Contact() {
             inputs.nombre
           }
           onChange={handleChange}/>
-
-        <TextField fullWidth size="small"
+          <TextField  size="small"
           sx={
-            {mt: 2}
+            {mt: 2,width: "70%"}
           }
           label="Apellido"
           name="apellido"
           value={
             inputs.apellido
           }
-          onChange={handleChange}/>
+          onChange={handleChange}/> 
 
-        <FormControl fullWidth size="small"
+      
+         <FormControl fullWidth size="small"
           sx={
             {
               mt: 2,
-              // width: 100
+              width: "70%"
             }
         }>
           <InputLabel id="demo-simple-select-label">Tipo de documento</InputLabel>
@@ -112,33 +113,40 @@ function Contact() {
             <MenuItem value={"DNI"}>DNI</MenuItem>
             <MenuItem value={"CARNÉ DE EXTRANJERIA"}>CARNÉ DE EXTRANJERIA</MenuItem>
           </Select>
-        </FormControl>
 
-        <TextField fullWidth size="small"
+         
+        </FormControl> 
+
+         
+       <TextField  size="small"
           sx={
-            {mt: 2}
+            {mt: 2,
+            width:"70%"}
           }
           label="Numero de documento"
           name="numeroDeDocumento"
           value={
             inputs.numeroDeDocumento
           }
-          onChange={handleChange}/>
+          onChange={handleChange}/> 
 
-        <TextField fullWidth size="small"
+
+           <TextField  size="small"
           sx={
-            {mt: 2}
+            {mt: 2,
+              width:"70%"}
           }
           label="Correo"
           name="correo"
           value={
             inputs.correo
           }
-          onChange={handleChange}/>
-
+          onChange={handleChange}/>  
+ 
         <TextField fullWidth size="small"
           sx={
-            {mt: 2}
+            {mt: 2,
+              width:"70%"}
           }
           label="Teléfono o celular"
           name="telefono"
@@ -147,9 +155,10 @@ function Contact() {
           }
           onChange={handleChange}/>
 
-        <TextField fullWidth size="small"
+         <TextField fullWidth size="small"
           sx={
-            {mt: 2}
+            {mt: 2,
+              width:"70%"}
           }
           label="Escriba aqui su mensaje"
           multiline
@@ -158,10 +167,10 @@ function Contact() {
           value={
             inputs.mensaje
           }
-          onChange={handleChange}/>
+          onChange={handleChange}/>    
 
-        <FormControlLabel sx={{
-					marginTop:"20px"
+         <FormControlLabel sx={{
+					marginTop:"20px",width: "70%"
 				}} control={<Checkbox
             checked={inputs.termsAndConditions}
           onChange={
@@ -174,14 +183,14 @@ function Contact() {
 
             }
           }
-          name="termsAndConditions"/>}
+          name="termsAndConditions"/>} 
           label="He leído y acepto las condiciones del tratamiento de datos personales"/>
 
-				<Button variant="contained"
+				  <Button variant="contained"
           sx={
 						
-            {marginTop:"20px",width: "100%"}
-        }>Enviar</Button>
+            {marginTop:"20px",width: "70%"}
+        }>Enviar</Button>  
 
       </div>
     <div className="contact-form">

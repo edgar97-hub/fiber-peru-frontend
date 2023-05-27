@@ -8,7 +8,7 @@ import {
   Switch,
   Outlet
 } from "react-router-dom";
-import {Home, PaymentMethods, Contac} from "./pages";
+import {Home, PaymentMethods, Contac, MiPortal} from "./pages";
 
 function App() {
   return (
@@ -20,6 +20,8 @@ function App() {
           element={<PaymentMethods/>}/>
         <Route path="/contacto"
           element={<Contac/>}/>
+          <Route path="/mi-portal"
+          element={<MiPortal/>}/>
       </Routes>
     </BrowserRouter>
   );
