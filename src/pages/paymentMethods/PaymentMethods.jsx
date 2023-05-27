@@ -1,5 +1,5 @@
 import { Navbar } from "../../components";
-import Header from "../../components/Header";
+import Header from "../../components/navbar/Header";
 import Info from "../../components/paymentMethods/info/Info";
 import WheretoPayServices from "../../components/paymentMethods/wheretoPayServices/WheretoPayServices";
 import BillingInformation from "../../components/paymentMethods/billingInformation/BillingInformation.jsx";

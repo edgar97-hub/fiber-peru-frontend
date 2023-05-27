@@ -1,13 +1,9 @@
 import React, {useState, useEffect} from "react";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import img from "../../../images/fibreoptica.jpg";
-import IconBcp from "../../../images/bcp-4.svg";
-import IconBbva from "../../../images/bbva.svg";
-import IconScotiabank from "../../../images/scotiabank.svg";
-import IconInterbank from "../../../images/interbank.svg";
+ 
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
-import IconBancos from "../../../images/bancos.jpg";
+import IconBancos from "../../../assets/images/bancos.jpg";
 import { Padding } from "@mui/icons-material";
 
 function Online() {

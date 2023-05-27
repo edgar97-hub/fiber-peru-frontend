@@ -1,11 +1,14 @@
-import { menuItems } from '../menuItems'
+import { menuItems } from '../../menuItems'
 import MenuItems from './MenuItems'
+import './navbar.scss'
+
+
 const Navbar = ({ click, handleclick }) => {
   return (
     <nav>
       <ul
         className="menus"
-        handleClick={handleclick}
+        onClick={handleclick}
         style={{
           left: click ? 0 : '-100%',
         }}

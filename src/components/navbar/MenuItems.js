@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import Dropdown from './Dropdown'
-
+import './navbar.scss'
 import { Link } from 'react-router-dom'
 
 const MenuItems = ({ items, depthLevel }) => {

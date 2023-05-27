@@ -1,6 +1,6 @@
 import { Navbar } from "../../components";
 import Video from "../../video/Video";
-import Header from "../../components/Header";
+import Header from "../../components/navbar/Header";
 import Services from "../../components/services/Services3";
 import ParticlesDemo from "./Particles";
 import GoogleMap from "../../components/googlemaps/GoogleMap";

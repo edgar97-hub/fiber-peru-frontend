@@ -1,14 +1,12 @@
 import React, {useState, useEffect} from "react";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import img from "../../../images/fibreoptica.jpg";
-import IconBcp from "../../../images/bcp-4.svg";
-import IconBbva from "../../../images/bbva.svg";
-import IconScotiabank from "../../../images/scotiabank.svg";
-import IconInterbank from "../../../images/interbank.svg";
+import IconBcp from "../../../assets/images/bcp-4.svg";
+import IconBbva from "../../../assets/images/bbva.svg";
+import IconScotiabank from "../../../assets/images/scotiabank.svg";
+import IconInterbank from "../../../assets/images/interbank.svg";
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
-import { Padding } from "@mui/icons-material";
-import IconAgentes from "../../../images/agentes.jpg";
+import IconAgentes from "../../../assets/images/agentes.jpg";
 
 function Agents() {
   return (<Box sx={

@@ -67,7 +67,7 @@ function Services() {
                     Fiber-Fix es flexible, escalable, y seguro. Nuestros paquetes pueden ser personalizados para satisfacer sus necesidades.
                 </div>
             </div>
-            <div class="slider-wrapper">
+            <div className="slider-wrapper">
 
                 <i id="left" className="fa-solid fa-angle-left"></i>
                 <div class="carousel">

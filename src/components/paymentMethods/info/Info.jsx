@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "./info.scss";
-import img from "../../../images/fibreoptica.jpg";
-import IconBank2 from "../../../images/bank2.jpg";
+import img from "../../../assets/images/fibreoptica.jpg";
+import IconBank2 from "../../../assets/images/bank2.jpg";
 
 function Info() {
   return (<div className="payment-methods-info">

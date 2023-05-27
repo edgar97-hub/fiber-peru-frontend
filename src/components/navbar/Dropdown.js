@@ -1,4 +1,6 @@
 import MenuItems from './MenuItems'
+import './navbar.scss'
+
 const Dropdown = ({ submenus, dropdown, depthLevel }) => {
   depthLevel = depthLevel + 1
   const dropdownClass = depthLevel > 1 ? 'dropdown-submenu' : ''

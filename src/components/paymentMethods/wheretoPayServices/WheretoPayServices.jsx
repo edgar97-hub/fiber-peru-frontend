@@ -4,14 +4,10 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import PhoneIcon from '@mui/icons-material/Phone';
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
-import DevicesIcon from '@mui/icons-material/Devices';
-import IconOnline from "../../../images/online.jpg";
-import IconAgente from "../../../images/agentes2.png";
-import IconBanco from "../../../images/bancos.webp";
-import IconYape from "../../../images/logo.png";
+import IconOnline from "../../../assets/images/online.jpg";
+import IconAgente from "../../../assets/images/agentes2.png";
+import IconBanco from "../../../assets/images/bancos.webp";
+import IconYape from "../../../assets/images/logo.png";
 
 import Bank from "./Bank";
 import Agents from "./Agents";
