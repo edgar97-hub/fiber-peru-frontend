@@ -75,4 +75,16 @@ export function start() {
 
 	document.addEventListener("mouseup", dragStop);
 	carousel.addEventListener("touchend", dragStop);
+	var lastScrollTop = 0;
+	document.addEventListener("scroll", function () { // or window.addEventListener("scroll"....
+		var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+		if (st > lastScrollTop) {
+			// downscroll code
+			console.log("downscroll")
+		} else if (st < lastScrollTop) {
+			// upscroll code
+			console.log("upscroll")
+		} // else was horizontal scroll
+		lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+	}, false);
 }

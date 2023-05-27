@@ -61,6 +61,7 @@ export default function SignInSide() {
 						</Typography>
 						<Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
 							<TextField
+								size='small'
 								margin="normal"
 								required
 								fullWidth
@@ -71,6 +72,7 @@ export default function SignInSide() {
 								autoFocus
 							/>
 							<TextField
+								size='small'
 								margin="normal"
 								required
 								fullWidth
@@ -96,7 +98,7 @@ export default function SignInSide() {
 									</Link>
 								</Grid>
 								<Grid item>
-									<Link href="#" variant="body2">
+									<Link href="/registro" variant="body2">
 										{"¿No tienes una cuenta? Inscribirse"}
 									</Link>
 								</Grid>

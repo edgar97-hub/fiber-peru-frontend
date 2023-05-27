@@ -9,7 +9,7 @@ import {
   Outlet
 } from "react-router-dom";
 import {Home, PaymentMethods, Contac, MiPortal} from "./pages";
-
+import SignUp from "./components/miPortal/signUp/SignUp"
 function App() {
   return (
     <BrowserRouter>
@@ -22,6 +22,8 @@ function App() {
           element={<Contac/>}/>
           <Route path="/mi-portal"
           element={<MiPortal/>}/>
+          <Route path="/registro"
+          element={<SignUp/>}/>
       </Routes>
     </BrowserRouter>
   );

@@ -294,7 +294,7 @@
 }
 .carousel .dragging{
   cursor: grab;
-  //scroll-behavior: auto;
+  scroll-behavior: auto;
 }
 .carousel.dragging .img-test{
   pointer-events: none;
@@ -308,12 +308,12 @@
   //width: calc(100% / 3);
   //max-width: calc(100% / 3);
   //border: 2px solid #0d0d0f;
-  // &:hover {
-  //      transform: scale(1.06);
-  //      transition: all 0.3s ease-out;
-  //      color: #0a0a0a;
-  //      cursor: pointer;
-  //    }
+  &:hover {
+        //transform: scale(1.06);
+        //transition: all 0.3s ease-out;
+        //color: #0a0a0a;
+        cursor: pointer;
+      }
 }
 .carousel .img-test:first-child{
   //margin-left: 100px;

@@ -4,9 +4,13 @@ import Footer from "../../components/footer/Footer";
 import SignIn from "../../components/miPortal/signIn/SignIn";
 
 export default function MiPortal() {
+    var isAuntentic = false
+    function Account(){
+        return"is autenticado"
+    }
     return (
         <div class="wrapper">
-            <SignIn />
+            { isAuntentic ? <Account />:<SignIn />}
         </div>
     );
 }

@@ -13,18 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-function Copyright(props) {
-	return (
-		<Typography variant="body2" color="text.secondary" align="center" {...props}>
-			{'Copyright © '}
-			<Link color="inherit" href="https://mui.com/">
-				Your Website
-			</Link>{' '}
-			{new Date().getFullYear()}
-			{'.'}
-		</Typography>
-	);
-}
+
 
 // TODO remove, this demo shouldn't need to reset the theme.
 
@@ -56,58 +45,36 @@ export default function SignUp() {
 						<LockOutlinedIcon />
 					</Avatar>
 					<Typography component="h1" variant="h5">
-						Sign up
+						Registrar usuario
 					</Typography>
 					<Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
 						<Grid container spacing={2}>
-							<Grid item xs={12} sm={6}>
+							<Grid item xs={12}  >
 								<TextField
+									size='small'
 									autoComplete="given-name"
 									name="firstName"
 									required
 									fullWidth
 									id="firstName"
-									label="First Name"
+									label="Numero de documento"
 									autoFocus
 								/>
 							</Grid>
-							<Grid item xs={12} sm={6}>
-								<TextField
-									required
-									fullWidth
-									id="lastName"
-									label="Last Name"
-									name="lastName"
-									autoComplete="family-name"
-								/>
-							</Grid>
+
 							<Grid item xs={12}>
 								<TextField
-									required
-									fullWidth
-									id="email"
-									label="Email Address"
-									name="email"
-									autoComplete="email"
-								/>
-							</Grid>
-							<Grid item xs={12}>
-								<TextField
+									size='small'
 									required
 									fullWidth
 									name="password"
-									label="Password"
+									label="Contraseña"
 									type="password"
 									id="password"
 									autoComplete="new-password"
 								/>
 							</Grid>
-							<Grid item xs={12}>
-								<FormControlLabel
-									control={<Checkbox value="allowExtraEmails" color="primary" />}
-									label="I want to receive inspiration, marketing promotions and updates via email."
-								/>
-							</Grid>
+					 
 						</Grid>
 						<Button
 							type="submit"
@@ -115,18 +82,17 @@ export default function SignUp() {
 							variant="contained"
 							sx={{ mt: 3, mb: 2 }}
 						>
-							Sign Up
+							Continuar
 						</Button>
 						<Grid container justifyContent="flex-end">
 							<Grid item>
-								<Link href="#" variant="body2">
-									Already have an account? Sign in
+								<Link href="/mi-portal" variant="body2">
+								¿Ya tienes una cuenta? Iniciar sesión
 								</Link>
 							</Grid>
 						</Grid>
 					</Box>
 				</Box>
-				<Copyright sx={{ mt: 5 }} />
 			</Container>
 		</ThemeProvider>
 	);
