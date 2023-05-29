@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <div className="nav-companies">
       <div className="logo">
-        <img
+        {/* <img
           src={logo}
           onClick={() => {
             window.open('test', '_blank').focus()
@@ -24,7 +24,7 @@ const Header = () => {
             width: '8rem',
             height: '4rem',
           }}
-        />
+        /> */}
         <div className="logo-info">
           <a href="/hogar">HOGAR</a>
           <a href="/empresas">EMPRESAS</a>

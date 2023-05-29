@@ -3,11 +3,11 @@ import './video.scss'
 import BgVideo from '../assets/media/Waves On The Beach Kissing The Shore  Free Stock Video.mp4'
 
 const Video = () => {
-  const [currentIndex, setCurrentIndex] = useState(false)
+  const [currentIndex, setCurrentIndex] = useState(true)
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentIndex((preve) => !preve)
+      //setCurrentIndex((preve) => !preve)
     }, 5000)
 
     return () => clearInterval(intervalId)
