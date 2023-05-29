@@ -45,38 +45,33 @@ export default function SignUp() {
         password: data.get('password'),
       }
       console.log(details)
-      const response = await axios.post(
+      // const response = await axios.post(
+      //   'http://localhost:5001' + '/api/v1/public/register',
+      //   details
+      // )
+
+      const loggedInResponse = await fetch(
         'http://localhost:5001' + '/api/v1/public/register',
-        details
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(details),
+        }
       )
+      const response = await loggedInResponse.json()
+
       console.log(response)
 
-      // if (response.data.success) {
-      // }
+
     } catch (error) {
       console.log(error)
     }
     setLoading(false)
   }
 
-  const [inputs, setInputs] = React.useState({
-    distrito: '',
-    nombre: '',
-    apellido: '',
-    tipoDeDocumento: '',
-    numeroDeDocumento: '',
-    correo: '',
-    telefono: '',
-    mensaje: '',
-    termsAndConditions: false,
-  })
 
-  const handleChange = (event) => {
-    setInputs({
-      ...inputs,
-      [event.target.name]: event.target.value,
-    })
-  }
+
+
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -135,7 +130,7 @@ export default function SignUp() {
                     labelId="demo-simple-select-label"
                     label="Tipo de documento"
                     name="documentType"
-                    // onChange={handleChange}
+                  // onChange={handleChange}
                   >
                     <MenuItem value={'DNI'}>DNI</MenuItem>
                     <MenuItem value={'RUC'}>RUC</MenuItem>

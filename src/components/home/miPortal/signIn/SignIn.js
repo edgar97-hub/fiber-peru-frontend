@@ -54,6 +54,7 @@ export default function SignInSide() {
         //     userDetails: response.user,
         //   },
         // })
+        console.log(response)
 
         navigate('/usuarios')
       } else {

@@ -6,22 +6,39 @@ import {
   Navigate,
   Router,
   Switch,
-  Outlet,
+  Outlet
 } from 'react-router-dom'
-import { Home, Companies, PaymentMethods, Contac, MiPortal } from './pages'
+import {
+  Home,
+  Companies,
+  PaymentMethods,
+  Contac,
+  MiPortal,
+  Dashboard,
+  Users
+} from './pages'
 import SignUp from './components/home/miPortal/signUp/SignUp'
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/hogar" element={<Home />} />
-        <Route path="/empresas" element={<Companies />} />
-        <Route path="/formas-de-pago" element={<PaymentMethods />} />
-        <Route path="/contacto" element={<Contac />} />
-        <Route path="/mi-portal" element={<MiPortal />} />
-        <Route path="/registro" element={<SignUp />} />
+        <Route path="/"
+          element={<Home/>}/>
+        <Route path="/hogar"
+          element={<Home/>}/>
+        <Route path="/empresas"
+          element={<Companies/>}/>
+        <Route path="/formas-de-pago"
+          element={<PaymentMethods/>}/>
+        <Route path="/contacto"
+          element={<Contac/>}/>
+        <Route path="/mi-portal"
+          element={<MiPortal/>}/>
+        <Route path="/registro"
+          element={<SignUp/>}/>
+        <Route path="/dashboard"
+          element={<Users/>}/>
       </Routes>
     </BrowserRouter>
   )

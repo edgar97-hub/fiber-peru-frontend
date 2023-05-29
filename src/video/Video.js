@@ -7,7 +7,7 @@ const Video = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      //setCurrentIndex((preve) => !preve)
+      setCurrentIndex((preve) => !preve)
     }, 5000)
 
     return () => clearInterval(intervalId)
