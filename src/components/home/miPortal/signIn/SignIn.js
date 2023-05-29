@@ -12,17 +12,57 @@ import Grid from '@mui/material/Grid'
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
 import Typography from '@mui/material/Typography'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { useNavigate } from 'react-router-dom'
 
 const defaultTheme = createTheme()
 
 export default function SignInSide() {
-  const handleSubmit = (event) => {
+  const [loading, setLoading] = React.useState(false)
+  const navigate = useNavigate()
+  const documentNumberRef = React.useRef()
+  const passRef = React.useRef()
+  const [credSave, setCredSave] = React.useState(false)
+
+  const handleSubmit = async (event) => {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    })
+
+    try {
+      setLoading(true)
+      var values = {
+        documentNumber: data.get('documentNumber'),
+        password: data.get('password'),
+      }
+      console.log(values)
+
+      const loggedInResponse = await fetch(
+        'http://localhost:5001' + '/api/v1/login',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(values),
+        }
+      )
+      const response = await loggedInResponse.json()
+
+      if (response.success) {
+        // Auth.storeToken(response.token)
+        // dispatch({
+        //   type: ActionTypes.LOGIN,
+        //   payload: {
+        //     isLoggedIn: true,
+        //     userDetails: response.user,
+        //   },
+        // })
+
+        navigate('/usuarios')
+      } else {
+        console.log(response)
+      }
+    } catch (error) {
+      console.log(error)
+    }
+    setLoading(false)
   }
 
   return (
@@ -69,14 +109,14 @@ export default function SignInSide() {
               sx={{ mt: 1 }}
             >
               <TextField
+                inputRef={documentNumberRef}
                 size="small"
                 margin="normal"
                 required
                 fullWidth
                 id="email"
                 label="Numero de documento"
-                name="email"
-                autoComplete="email"
+                name="documentNumber"
                 sx={{
                   '& label.Mui-focused': {
                     color: '#d60cb8',
@@ -98,6 +138,7 @@ export default function SignInSide() {
                 }}
               />
               <TextField
+                inputRef={passRef}
                 size="small"
                 margin="normal"
                 required

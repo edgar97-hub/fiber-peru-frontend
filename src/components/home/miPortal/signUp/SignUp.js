@@ -16,17 +16,47 @@ import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
 import Select from '@mui/material/Select'
+import { useNavigate } from 'react-router-dom'
+import axios from "axios"
 
 const defaultTheme = createTheme()
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
+  const documentTypeRef = React.useRef()
+  const documentNumberRef = React.useRef()
+  const passRef = React.useRef()
+  const confirmPasswordRef = React.useRef()
+  const [loading, setLoading] = React.useState(false)
+  const navigate = useNavigate()
+
+  const handleSubmit = async (event) => {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    })
+
+    if (data.get('password') != data.get('confirmPassword')) {
+      alert('la contraseña no coicide')
+      return false
+    }
+    try {
+      setLoading(true)
+      var details = {
+        documentType: data.get('documentType'),
+        documentNumber: data.get('documentNumber'),
+        password: data.get('password'),
+      }
+      console.log(details)
+      const response = await axios.post(
+        'http://localhost:5001' + '/api/v1/public/register',
+        details
+      )
+      console.log(response)
+
+      // if (response.data.success) {
+      // }
+    } catch (error) {
+      console.log(error)
+    }
+    setLoading(false)
   }
 
   const [inputs, setInputs] = React.useState({
@@ -101,26 +131,28 @@ export default function SignUp() {
                     Tipo de documento
                   </InputLabel>
                   <Select
+                    inputRef={documentTypeRef}
                     labelId="demo-simple-select-label"
-                    value={inputs.distrito}
                     label="Tipo de documento"
-                    name="distrito"
-                    onChange={handleChange}
+                    name="documentType"
+                    // onChange={handleChange}
                   >
-                    <MenuItem value={10}>DNI</MenuItem>
-                    <MenuItem value={20}>RUC</MenuItem>
-                    <MenuItem value={30}> CARNET DE EXTRANJERIA </MenuItem>
+                    <MenuItem value={'DNI'}>DNI</MenuItem>
+                    <MenuItem value={'RUC'}>RUC</MenuItem>
+                    <MenuItem value={'CARNET DE EXTRANJERIA'}>
+                      CARNET DE EXTRANJERIA
+                    </MenuItem>
                   </Select>
                 </FormControl>
               </Grid>
               <Grid item xs={12}>
                 <TextField
+                  inputRef={documentNumberRef}
                   size="small"
                   autoComplete="given-name"
-                  name="firstName"
+                  name="documentNumber"
                   required
                   fullWidth
-                  id="firstName"
                   label="Numero de documento"
                   sx={{
                     '& label.Mui-focused': {
@@ -146,6 +178,7 @@ export default function SignUp() {
 
               <Grid item xs={12}>
                 <TextField
+                  inputRef={passRef}
                   size="small"
                   required
                   fullWidth
@@ -175,7 +208,38 @@ export default function SignUp() {
                   }}
                 />
               </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  inputRef={confirmPasswordRef}
+                  size="small"
+                  required
+                  fullWidth
+                  name="confirmPassword"
+                  label="Confirmar contraseña"
+                  type="password"
+                  sx={{
+                    '& label.Mui-focused': {
+                      color: '#d60cb8',
+                    },
+                    '& .MuiInput-underline:after': {
+                      borderBottomColor: '#d60cb8',
+                    },
+                    '& .MuiOutlinedInput-root': {
+                      '& fieldset': {
+                        //borderColor: '#d60cb8',
+                      },
+                      '&:hover fieldset': {
+                        //borderColor: '#d60cb8',
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: '#d60cb8',
+                      },
+                    },
+                  }}
+                />
+              </Grid>
             </Grid>
+
             <Button
               type="submit"
               fullWidth
