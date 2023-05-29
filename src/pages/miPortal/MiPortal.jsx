@@ -1,4 +1,4 @@
-import SignIn from "../../components/miPortal/signIn/SignIn";
+import SignIn from "../../components/home/miPortal/signIn/SignIn";
 
 export default function MiPortal() {
     var isAuntentic = false

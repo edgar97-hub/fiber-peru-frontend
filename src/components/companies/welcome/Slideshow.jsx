@@ -66,8 +66,8 @@ export default function Slideshow() {
             style={{
               background: ` url(${item.img})`,
               backgroundRepeat: 'no-repeat',
-              backgroundSize: item.size,
-              //backgroundPosition: item.position,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
             }}
           >
             {item.text}

@@ -9,7 +9,7 @@ import {
   Outlet,
 } from 'react-router-dom'
 import { Home, Companies, PaymentMethods, Contac, MiPortal } from './pages'
-import SignUp from './components/miPortal/signUp/SignUp'
+import SignUp from './components/home/miPortal/signUp/SignUp'
 
 function App() {
   return (

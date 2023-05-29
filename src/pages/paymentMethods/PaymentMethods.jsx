@@ -1,6 +1,6 @@
 import { Navbar } from "../../components";
 import Header from "../../components/home/navbar/Header";
-import Info from "../../components/paymentMethods/info/Info";
+import Info from "../../components/home/paymentMethods/info/Info";
 import WheretoPayServices from "../../components/home/paymentMethods/wheretoPayServices/WheretoPayServices";
 import BillingInformation from "../../components/home/paymentMethods/billingInformation/BillingInformation.jsx";
 import BankCommission from "../../components/home/paymentMethods/bankCommission/BankCommission";
