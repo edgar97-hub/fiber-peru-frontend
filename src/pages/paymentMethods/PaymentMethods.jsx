@@ -1,10 +1,10 @@
 import { Navbar } from "../../components";
-import Header from "../../components/navbar/Header";
+import Header from "../../components/home/navbar/Header";
 import Info from "../../components/paymentMethods/info/Info";
-import WheretoPayServices from "../../components/paymentMethods/wheretoPayServices/WheretoPayServices";
-import BillingInformation from "../../components/paymentMethods/billingInformation/BillingInformation.jsx";
-import BankCommission from "../../components/paymentMethods/bankCommission/BankCommission";
-import Footer from "../../components/footer/Footer";
+import WheretoPayServices from "../../components/home/paymentMethods/wheretoPayServices/WheretoPayServices";
+import BillingInformation from "../../components/home/paymentMethods/billingInformation/BillingInformation.jsx";
+import BankCommission from "../../components/home/paymentMethods/bankCommission/BankCommission";
+import Footer from "../../components/home/footer/Footer";
 
 export default function PaymentMethods() {
     return (

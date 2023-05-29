@@ -1,10 +1,7 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
 @font-face {
-  font-family: 'Merianda';
+  //font-family: 'Merianda';
+  //font-family: "MADETommySoftRegular",sans-serif;
+
   src: url('../fonts/Merianda.ttf') format('woff2');
 }
 
@@ -17,10 +14,10 @@
   justify-content: space-around;
   position: relative;
   transition: 0.5s;
-  font-family: 'Merianda';
+  //font-family: 'Merianda';
   //border: 1px solid #0d0d0f;
-
   .wraper-test {
+    font-family: 'MADETommySoftRegular', sans-serif;
     //border: 1px solid #0d0d0f;
     display: flex;
     flex-direction: row;
@@ -30,19 +27,16 @@
     margin-top: 150px;
     width: 100%;
     height: 100%;
-
-    .wraper-info {
-      //border: 1px solid #0d0d0f;
-
+    .wrapper-information {
       .title {
         color: #315db7;
-        font-size: 55px;
+        //font-size: 55px;
+        font-size: 45px !important;
         font-weight: 500;
         margin-bottom: 2rem;
         text-align: center;
         padding-left: 55px;
         padding-right: 55px;
-        //border: 1px solid #0d0d0f;
         @media screen and (max-width: 960px) {
           font-size: 20px;
         }
@@ -91,15 +85,16 @@
   justify-content: space-around;
   z-index: 2;
   color: white;
+  font-family: 'MADETommySoftRegular', sans-serif;
 }
 
-h1 {
+.video-title {
   font-size: 6em;
   animation-name: fade;
   animation-duration: 4s;
 }
 
-p {
+.video-description {
   justify-self: flex-end;
   font-size: 2em;
 }

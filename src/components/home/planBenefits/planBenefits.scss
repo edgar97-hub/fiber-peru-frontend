@@ -1,0 +1,115 @@
+#plan-benefits {
+  // padding: 50px 0 160px;
+  padding-top: 80px;
+  padding-bottom: 100px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+    // background: #e7e8eb;
+  //border: 1px solid #0d0d0f;
+  font-family: "MADETommySoftRegular",sans-serif;
+
+}
+
+.www{
+  display: flex;
+}
+.wrapperTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  margin-bottom: 50px;
+  //border: 1px solid #0d0d0f;
+
+  .title {
+    color: #d60cb8;
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: auto;
+    //border: 1px solid #0d0d0f;
+    padding-left: 25px;
+    padding-right: 25px;
+     @media screen and (max-width: 960px) {
+      font-size: 20px;
+    }
+  }
+
+  .subtitle {
+    //border: 1px solid #0d0d0f;
+    text-align: center;
+    min-width: 50%;
+    padding: 20px;
+    font-size: 25px;
+    color: #f6f7f8;
+    border-radius: 9px;
+    background-color:#d60cb8;
+    margin-left: 25px;
+    margin-right: 25px;
+    @media screen and (max-width: 960px) {
+      font-size: 20px;
+    }
+  }
+}
+
+.plan-benefits-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px !important;
+  width: 20%;
+  border: 0.1px solid #868484;
+  //box-shadow: 0.5px 3px 3px 0.5px grey;
+  border-radius: 9px;
+
+  &:hover {
+    transform: scale(1.06);
+    transition: all 0.3s ease-out;
+    color: #0a0a0a;
+    cursor: pointer;
+  }
+
+  .title {
+    text-align: center;
+    text-transform: capitalize;
+    color: #d60cb8;
+    font-size: 17px;
+    line-height: 1.2rem;
+    padding-top: 5px;
+    margin-bottom: 9px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid rgb(80, 80, 78);
+    width: 80%;
+  }
+ 
+  .description {
+    color: #708198;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.625rem;
+    text-align: center;
+    width: 100%;
+    //border: 1px solid #0d0d0f;
+
+    @media screen and (max-width: 960px) {
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 1250px) {
+    width: 20%;
+    margin: 15px !important;
+  }
+
+  @media screen and (max-width: 960px) {
+    width: 60%;
+    margin: 9px !important;
+  }
+}

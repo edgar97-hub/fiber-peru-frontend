@@ -19,8 +19,8 @@ const Video = () => {
         <video src={BgVideo} autoPlay muted loop class="video-bg" />
         <div className="bg-overlay"></div>
         <div className="home-text">
-          <h1>The Bubu Island</h1>
-          <p>Come live out your ideal vacation with us</p>
+          <h1 className='video-title'>The Bubu Island</h1>
+          <p className='video-description'>Come live out your ideal vacation with us</p>
         </div>
         <div className="home-btn">Explore</div>
       </>
@@ -30,12 +30,12 @@ const Video = () => {
   const Info = () => {
     return (
       <div className="wraper-test">
-        <div className="wraper-info">
+        <div className="wrapper-information">
           <div className="title">Fiber fix</div>
           <div className="description">planes corporativos</div>
         </div>
 
-        <div className="wraper-info">
+        <div className="wrapper-information">
           <div className="title">Fiber peru</div>
           <div className="description">Internet hogar residencial</div>
         </div>

@@ -1,4 +1,4 @@
-export const menuItems = [
+export const dataItems = [
   {
     title: 'inicio',
     url: '/',
@@ -19,7 +19,6 @@ export const menuItems = [
         title: 'planes gamer',
         url: 'seo',
       },
-       
     ],
   },
   {

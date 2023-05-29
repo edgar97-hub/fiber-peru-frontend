@@ -8,7 +8,7 @@ import {
   Switch,
   Outlet,
 } from 'react-router-dom'
-import { Home, PaymentMethods, Contac, MiPortal } from './pages'
+import { Home, Companies, PaymentMethods, Contac, MiPortal } from './pages'
 import SignUp from './components/miPortal/signUp/SignUp'
 
 function App() {
@@ -16,6 +16,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/hogar" element={<Home />} />
+        <Route path="/empresas" element={<Companies />} />
         <Route path="/formas-de-pago" element={<PaymentMethods />} />
         <Route path="/contacto" element={<Contac />} />
         <Route path="/mi-portal" element={<MiPortal />} />
