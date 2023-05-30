@@ -5,8 +5,7 @@
   overflow: hidden;
   width: 100%;
   //min-height: 90vh;
-
-  border: 1px solid #0d0d0f;
+  //border: 1px solid #0d0d0f;
 }
 
 .slideshowSlider {
@@ -21,6 +20,21 @@
   min-height: 70vh;
   width: 100%;
   border-radius: 40px;
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    //border: 1px solid #0d0d0f;
+
+    .title {
+      padding-top: 50px;
+      font-size: 40px;
+    }
+    .description{
+      font-size: 60px;
+
+    }
+  }
 }
 
 /* Buttons */
@@ -64,7 +78,7 @@
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-  font-size: 190px;
+  font-size: 50px;
 }
 
 @keyframes textclip {
@@ -84,7 +98,7 @@
 }
 
 .lineUp {
-  animation: 2s anim-lineUp ease-out infinite;
+  animation: 2s anim-lineUp ease-in infinite;
 }
 
 @keyframes anim-lineUp {

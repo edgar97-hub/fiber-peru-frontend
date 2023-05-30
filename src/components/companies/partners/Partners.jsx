@@ -11,16 +11,14 @@ function WhyChooseFiber() {
           <p className="subtitleChooseUs">
             Las principales empresas en seguridad informática y desarrollo profesional nos acompañan.
           </p>
-
-
         </div>
       </div>
-      <div className="infoColumnChooseUs">
+      <div className="images">
         <img className="imgChooseUs"
           src={"https://winempresas.pe/img/home/partenerts-1.png?ver=1.7"}
           alt={''}/>
         <img className="imgChooseUs"
-          src={"https://winempresas.pe/img/home/partenerts-1.png?ver=1.7"}
+          src={"https://winempresas.pe/img/home/partenerts-3.png?ver=1.7"}
           alt={''}/>
         <img className="imgChooseUs"
           src={"https://winempresas.pe/img/home/partenerts-1.png?ver=1.7"}
