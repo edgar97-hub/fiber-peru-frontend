@@ -5,3 +5,4 @@ export { default as MiPortal} from './miPortal/MiPortal';
 export { default as Companies } from './companies/Companies';
 export { default as Dashboard } from './dashboard/Home';
 export { default as Users } from './users/Users';
+export { default as Inquiries } from './inquiries/Inquiries';

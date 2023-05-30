@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useState, useEffect } from 'react'
 import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
 import CssBaseline from '@mui/material/CssBaseline'
@@ -18,6 +18,8 @@ import FormControl from '@mui/material/FormControl'
 import Select from '@mui/material/Select'
 import { useNavigate } from 'react-router-dom'
 import axios from "axios"
+import Notification from '../../../toolsForm/Notification'
+import ConfirmDialog from '../../../toolsForm/ConfirmDialog'
 
 const defaultTheme = createTheme()
 
@@ -28,6 +30,12 @@ export default function SignUp() {
   const confirmPasswordRef = React.useRef()
   const [loading, setLoading] = React.useState(false)
   const navigate = useNavigate()
+  const [notify, setNotify] = useState({
+    isOpen: false,
+    message: '',
+    type: '',
+  })
+
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -42,6 +50,7 @@ export default function SignUp() {
       var details = {
         documentType: data.get('documentType'),
         documentNumber: data.get('documentNumber'),
+        email: data.get('email'),
         password: data.get('password'),
       }
       console.log(details)
@@ -61,6 +70,15 @@ export default function SignUp() {
       const response = await loggedInResponse.json()
 
       console.log(response)
+      setNotify({
+        isOpen: true,
+        message: 'guardado con éxito',
+        type: 'success',
+      })
+      if (response.success) {
+        navigate("/mi-portal")
+
+      }
 
 
     } catch (error) {
@@ -149,6 +167,36 @@ export default function SignUp() {
                   required
                   fullWidth
                   label="Numero de documento"
+                  sx={{
+                    '& label.Mui-focused': {
+                      color: '#d60cb8',
+                    },
+                    '& .MuiInput-underline:after': {
+                      borderBottomColor: '#d60cb8',
+                    },
+                    '& .MuiOutlinedInput-root': {
+                      '& fieldset': {
+                        //borderColor: '#d60cb8',
+                      },
+                      '&:hover fieldset': {
+                        //borderColor: '#d60cb8',
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: '#d60cb8',
+                      },
+                    },
+                  }}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  //inputRef={documentNumberRef}
+                  size="small"
+                  autoComplete="given-name"
+                  name="email"
+                  required
+                  fullWidth
+                  label="Correo"
                   sx={{
                     '& label.Mui-focused': {
                       color: '#d60cb8',
@@ -266,6 +314,7 @@ export default function SignUp() {
             </Grid>
           </Box>
         </Box>
+        <Notification notify={notify} setNotify={setNotify} />
       </Container>
     </ThemeProvider>
   )

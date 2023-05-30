@@ -13,21 +13,29 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 import BusinessIcon from '@mui/icons-material/Business'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Checkbox from '@mui/material/Checkbox'
+import Notification from '../../toolsForm/Notification'
+import { useNavigate } from 'react-router-dom'
 
 function Contact() {
   const [age, setAge] = React.useState('')
+  const [notify, setNotify] = useState({
+    isOpen: false,
+    message: '',
+    type: '',
+  })
+  const navigate = useNavigate()
 
   const [inputs, setInputs] = React.useState({
     distrito: '',
-    nombre: '',
-    apellido: '',
-    tipoDeDocumento: '',
-    numeroDeDocumento: '',
-    correo: '',
-    telefono: '',
-    mensaje: '',
+    fullname: '',
+    documenttype: '',
+    documentnumber: '',
+    email: '',
+    mobile: '',
+    message: '',
     termsAndConditions: false,
   })
+ 
 
   const handleChange = (event) => {
     setInputs({
@@ -58,9 +66,8 @@ function Contact() {
             name="distrito"
             onChange={handleChange}
           >
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value={"Sachaca"}>Sachaca</MenuItem>
+            <MenuItem value={"Tiabaya"}>Tiabaya</MenuItem>
           </Select>
         </FormControl>
 
@@ -68,19 +75,10 @@ function Contact() {
           size="small"
           sx={{ mt: 2, width: '70%' }}
           label="Nombre"
-          name="nombre"
-          value={inputs.nombre}
+          name="fullname"
+          value={inputs.fullname}
           onChange={handleChange}
         />
-        <TextField
-          size="small"
-          sx={{ mt: 2, width: '70%' }}
-          label="Apellido"
-          name="apellido"
-          value={inputs.apellido}
-          onChange={handleChange}
-        />
-
         <FormControl
           fullWidth
           size="small"
@@ -94,9 +92,9 @@ function Contact() {
           </InputLabel>
           <Select
             labelId="demo-simple-select-label"
-            value={inputs.tipoDeDocumento}
+            value={inputs.documenttype}
             label="Tipo de documento"
-            name="tipoDeDocumento"
+            name="documenttype"
             onChange={handleChange}
           >
             <MenuItem value={'DNI'}>DNI</MenuItem>
@@ -110,8 +108,8 @@ function Contact() {
           size="small"
           sx={{ mt: 2, width: '70%' }}
           label="Numero de documento"
-          name="numeroDeDocumento"
-          value={inputs.numeroDeDocumento}
+          name="documentnumber"
+          value={inputs.documentnumber}
           onChange={handleChange}
         />
 
@@ -119,8 +117,8 @@ function Contact() {
           size="small"
           sx={{ mt: 2, width: '70%' }}
           label="Correo"
-          name="correo"
-          value={inputs.correo}
+          name="email"
+          value={inputs.email}
           onChange={handleChange}
         />
 
@@ -129,8 +127,8 @@ function Contact() {
           size="small"
           sx={{ mt: 2, width: '70%' }}
           label="Teléfono o celular"
-          name="telefono"
-          value={inputs.telefono}
+          name="mobile"
+          value={inputs.mobile}
           onChange={handleChange}
         />
 
@@ -141,8 +139,8 @@ function Contact() {
           label="Escriba aqui su mensaje"
           multiline
           rows={4}
-          name="mensaje"
-          value={inputs.mensaje}
+          name="message"
+          value={inputs.message}
           onChange={handleChange}
         />
 
@@ -167,7 +165,41 @@ function Contact() {
           label="He leído y acepto las condiciones del tratamiento de datos personales"
         />
 
-        <Button variant="contained" sx={{ marginTop: '20px', width: '70%' }}>
+        <Button variant="contained" sx={{ marginTop: '20px', width: '70%' }} onClick={async ()=>{
+
+          console.log(inputs)
+
+          const loggedInResponse = await fetch(
+            'http://localhost:5001' + '/api/v1/users/consultas',
+            {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(inputs),
+            }
+          )
+          const response = await loggedInResponse.json()
+    
+
+          if (response.success) {
+            setNotify({
+              isOpen: true,
+              message: 'guardado con éxito',
+              type: 'success',
+            })
+            navigate('/hogar')
+            console.log(response)
+    
+          } else {
+            setNotify({
+              isOpen: true,
+              message: 'Credenciales incorrectas',
+              type: 'error',
+            })
+            console.log(response)
+          }
+
+           
+        }}>
           Enviar
         </Button>
       </div>
@@ -271,8 +303,10 @@ function Contact() {
               Barlovento
             </Typography>
           </div>
+      <Notification notify={notify} setNotify={setNotify} />
         </div>
       </div>
+
     </div>
   )
 }

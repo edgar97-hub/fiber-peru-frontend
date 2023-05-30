@@ -15,7 +15,8 @@ import {
   Contac,
   MiPortal,
   Dashboard,
-  Users
+  Users,
+  Inquiries
 } from './pages'
 import SignUp from './components/home/miPortal/signUp/SignUp'
 
@@ -39,6 +40,10 @@ function App() {
           element={<SignUp/>}/>
         <Route path="/dashboard"
           element={<Users/>}/>
+        <Route path="/usuarios"
+          element={<Users/>}/>
+        <Route path="/consultas"
+          element={<Inquiries/>}/>
       </Routes>
     </BrowserRouter>
   )

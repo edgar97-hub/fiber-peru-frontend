@@ -38,15 +38,17 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const headCells = [
+  { id: 'distrito', label: 'Distrito' },
+  { id: 'fullname', label: 'Nombre completo' },
   { id: 'documenttype', label: 'tipo de documento' },
   { id: 'Documentnumber', label: 'Número de documento' },
   { id: 'email', label: 'Email' },
-  { id: 'fullName', label: 'Nombre completo' },
-  { id: 'mobile', label: 'Número de teléfono' },
+  // { id: 'mobile', label: 'Número de teléfono' },
+  // { id: 'message', label: 'mensaje' },
   { id: 'actions', label: 'Actions', disableSorting: true },
 ]
 
-export default function UserTable() {
+export default function InquiriesTable() {
   const classes = useStyles()
   const [recordForEdit, setRecordForEdit] = useState(null)
   const [records, setRecords] = useState([{ id: '' }])
@@ -78,7 +80,7 @@ export default function UserTable() {
 
      async function getUsers(){
       const loggedInResponse = await fetch(
-        'http://localhost:5001' + '/api/v1/users',
+        'http://localhost:5001' + '/api/v1/users/consultas',
         {
           method: 'GET',
           headers: { 'Content-Type': 'application/json' },
@@ -87,7 +89,12 @@ export default function UserTable() {
       )
       const response = await loggedInResponse.json()
       console.log(response.userMap)
-    setRecords(response.userMap);
+      if(response.userMap){
+        setRecords(response.userMap);
+
+      }else{
+        setRecords([]);
+      }
 
     }
     getUsers()
@@ -238,7 +245,7 @@ export default function UserTable() {
             }}
             onChange={handleSearch}
           />
-          <Controls.Button
+          {/* <Controls.Button
             variant="outlined"sx={{
               //width: { xs: 400, sm: 280, md: 600, lg: 700 },
               margin: 1,
@@ -249,19 +256,21 @@ export default function UserTable() {
               setOpenPopup(true)
               setRecordForEdit(null)
             }}
-          />
+          /> */}
         </Toolbar>
         <TblContainer size="small">
           <TblHead />
           <TableBody>
             {recordsAfterPagingAndSorting()?.map((item) => (
               <TableRow key={item.documenttype}>
-                 <TableCell>{item.documenttype}</TableCell>
+
+ 
+                 <TableCell>{item.distrito}</TableCell>
+                <TableCell>{item.fullname}</TableCell>
+                <TableCell>{item.documenttype}</TableCell>
                 <TableCell>{item.documentnumber}</TableCell>
                 <TableCell>{item.email}</TableCell>
-                <TableCell>{item.fullName}</TableCell>
-                <TableCell>{item.telefono}</TableCell>
-               
+
 
                 {/* <TableCell>{item.role}</TableCell> */}
                 <TableCell>
@@ -285,7 +294,7 @@ export default function UserTable() {
                       })
                     }}
                   >
-                    <DeleteIcon sx={{ color: '#888e8b' }} />
+                    {/* <DeleteIcon sx={{ color: '#888e8b' }} /> */}
                   </Controls.ActionButton>
                 </TableCell>
               </TableRow>

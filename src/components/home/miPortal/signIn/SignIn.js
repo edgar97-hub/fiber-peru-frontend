@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useState, useEffect } from 'react'
 import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
 import CssBaseline from '@mui/material/CssBaseline'
@@ -13,6 +13,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
 import Typography from '@mui/material/Typography'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { useNavigate } from 'react-router-dom'
+import Notification from '../../../toolsForm/Notification'
+import ConfirmDialog from '../../../toolsForm/ConfirmDialog'
 
 const defaultTheme = createTheme()
 
@@ -22,6 +24,11 @@ export default function SignInSide() {
   const documentNumberRef = React.useRef()
   const passRef = React.useRef()
   const [credSave, setCredSave] = React.useState(false)
+  const [notify, setNotify] = useState({
+    isOpen: false,
+    message: '',
+    type: '',
+  })
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -46,18 +53,20 @@ export default function SignInSide() {
       const response = await loggedInResponse.json()
 
       if (response.success) {
-        // Auth.storeToken(response.token)
-        // dispatch({
-        //   type: ActionTypes.LOGIN,
-        //   payload: {
-        //     isLoggedIn: true,
-        //     userDetails: response.user,
-        //   },
-        // })
+        setNotify({
+          isOpen: true,
+          message: 'guardado con éxito',
+          type: 'success',
+        })
+        navigate('/dashboard')
         console.log(response)
 
-        navigate('/usuarios')
       } else {
+        setNotify({
+          isOpen: true,
+          message: 'Credenciales incorrectas',
+          type: 'error',
+        })
         console.log(response)
       }
     } catch (error) {
@@ -203,6 +212,7 @@ export default function SignInSide() {
           </Box>
         </Grid>
       </Grid>
+      <Notification notify={notify} setNotify={setNotify} />
     </ThemeProvider>
   )
 }

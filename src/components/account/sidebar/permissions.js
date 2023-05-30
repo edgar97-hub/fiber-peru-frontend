@@ -43,6 +43,17 @@ export const permissions = [
 		],
 	},
 
+	{
+		title: "contacto",
+		path: "/consultas",
+		// icon: Isettings,
+		// bgColor: "hsl(0,0%,73%)",
+		// bgColorHover: "hsl(0,0%,83%)",
+		// size: "contain",
+		// position: "50% 30px",
+		 
+	},
+
 
 
 ];
