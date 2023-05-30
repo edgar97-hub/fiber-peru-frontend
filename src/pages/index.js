@@ -6,3 +6,6 @@ export { default as Companies } from './companies/Companies';
 export { default as Dashboard } from './dashboard/Home';
 export { default as Users } from './users/Users';
 export { default as Inquiries } from './inquiries/Inquiries';
+export { default as Tiabaya } from './districts/Tiabaya';
+export { default as Yanahuara } from './districts/Yanahuara';
+export { default as PageAboutus } from './companies/PageAboutus';

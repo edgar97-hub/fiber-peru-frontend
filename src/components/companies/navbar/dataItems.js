@@ -5,7 +5,7 @@ export const dataItems = [
     submenu: [
       {
         title: '¿Quiénes somos?',
-        url: 'web-design',
+        url: '/quienes-somos',
       },
       {
         title: 'regulación',

@@ -16,7 +16,10 @@ import {
   MiPortal,
   Dashboard,
   Users,
-  Inquiries
+  Inquiries,
+  Tiabaya,
+  Yanahuara,
+  PageAboutus
 } from './pages'
 import SignUp from './components/home/miPortal/signUp/SignUp'
 
@@ -44,6 +47,15 @@ function App() {
           element={<Users/>}/>
         <Route path="/consultas"
           element={<Inquiries/>}/>
+          <Route path="/tiabaya"
+          element={<Tiabaya/>}/>
+          <Route path="/yanahuara"
+          element={<Yanahuara/>}/>
+
+
+          {/** routes companies */}
+          <Route path="/quienes-somos"
+          element={<PageAboutus/>}/>
       </Routes>
     </BrowserRouter>
   )

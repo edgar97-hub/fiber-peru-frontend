@@ -13,7 +13,7 @@ import Grid from '@mui/material/Grid';
 import { permissions } from "./permissions";
 //import { useAuth } from "../../contexts/AuthContext";
 //import { Login } from "../../pages";
-//import isosgroup from "../../assets/images/isosgroup.png";
+import fiber_peru from "../../../assets/images/fiber_peru.jpg";
 //import LogoDaphtech from "../../assets/images/logo_daphtech.png";
 import CircularProgress from "@mui/material/CircularProgress";
 import React, { useState, useEffect, useRef } from "react";
@@ -35,7 +35,7 @@ import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
 //import EditDivisa from "./EditDivisa";
 import ReplyAllIcon from "@mui/icons-material/ReplyAll";
-// import UserInfo from "./UserInfo";
+import UserInfo from "./UserInfo";
 
 const drawerWidth = 240;
 // const useStyles = makeStyles((theme) => ({
@@ -291,7 +291,9 @@ function ResponsiveDrawer({ children }) {
 		// 	<Login />
 		// );
 	};
-
+	function logout(){
+		
+	}
 	const drawer = (
 		<div
 			className="test"
@@ -301,19 +303,24 @@ function ResponsiveDrawer({ children }) {
 				//border: "5px solid rgb(102, 97, 97)",
 			}}
 		>
-			<div className="company-and-user-info">
+			<div className="company-and-user-info" style={{
+				display:"flex"
+			}}>
 				<img
-					src={"LogoDaphtech"}
+					src={fiber_peru}
 					alt="jobs"
 					style={{
 						marginLeft: "50px",
-						marginTop: "10px",
-						minWidth: "200px",
-						minHeight: "200px",
+						marginTop: "20px",
+						width: "100px",
+						height: "100px",
+						borderRadius:"99px",
+						overflow: "hidden",
+						//transform: "scale(1.3)",
 						//border: "1px solid #0d0d0f",
 					}}
 				/>
-				{/* <UserInfo currentUser={currentUser} logout={logout} /> */}
+				 <UserInfo currentUser={{}} logout={logout} /> 
 			</div>
 
 			 

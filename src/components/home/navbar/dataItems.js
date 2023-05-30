@@ -23,15 +23,15 @@ export const dataItems = [
   },
   {
     title: 'distritos',
-    url: '/about',
+    url: '/hogar',
     submenu: [
       {
-        title: 'arequipa',
-        url: 'who-we-are',
+        title: 'Tiabaya',
+        url: '/tiabaya',
       },
       {
-        title: 'piura',
-        url: 'our-values',
+        title: 'yanahuara',
+        url: '/yanahuara',
       },
     ],
   },

@@ -7,7 +7,7 @@
   margin-top: 20px;
   padding-top: 60px;
   margin-bottom: 30px;
-   border: 5px solid #0d0d0f;
+   //border: 5px solid #0d0d0f;
    //background-image: url("../../images/bg-art-5.png");
    background-color: transparent;
    background-position: center;
@@ -15,12 +15,12 @@
    background-color: #fa37dd;
    opacity: 1;
    font-family: "MADETommySoftRegular",sans-serif;
-
+  justify-content: center;
    .infoColumnChooseUs {
     margin-bottom: 15px;
     padding-right: 75px;
     padding-left: 75px;
-    width: 50%;
+    width: 40%;
     //border: 1px solid #0d0d0f;
   
   
@@ -82,6 +82,13 @@
           line-height: 1.1;
           font-weight: 700;
           color: #edf5f5;
+          @media screen and (max-width: 960px) {
+            font-size: 13px !important;
+          }
+        }
+        .itemDescriptionChooseUs {
+          font-size: 18px;
+          color: #ced6e2;
           @media screen and (max-width: 960px) {
             font-size: 13px !important;
           }
