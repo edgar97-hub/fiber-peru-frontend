@@ -136,6 +136,7 @@
   padding: 20px;
   justify-content: center;
   //padding-left: 10px;
+  background: #575555;
 
 }
 .slider-wrapper i{
@@ -160,11 +161,11 @@
   transform: translateY(-50%) scale(0.9);
 }
 .slider-wrapper i:hover{
-  background: #dadada;
+  background: #575656;
 }
 .slider-wrapper i{
-  background: #dadada;
-  color: #d60cb8;
+  background: #575656;
+  color: #f7f7f7;
 }
 .slider-wrapper i:first-child{
   left: 22%;
