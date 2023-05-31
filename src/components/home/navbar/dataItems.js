@@ -9,15 +9,15 @@ export const dataItems = [
     submenu: [
       {
         title: 'television digital',
-        url: 'web-design',
+        url: '/television-digital',
       },
-      {
-        title: 'telefonia',
-        url: 'web-dev',
-      },
+      // {
+      //   title: 'telefonia',
+      //   url: 'web-dev',
+      // },
       {
         title: 'planes gamer',
-        url: 'seo',
+        url: '/planes-gamer',
       },
     ],
   },

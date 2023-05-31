@@ -24,9 +24,9 @@ function Softphone() {
             mb: 2,
             width: '50%',
             fontWeight: '600 !important',
-            background: 'linear-gradient(73deg, #d60cb8, #fc59e3)',
+            background: 'linear-gradient(73deg, #4d4a4c, #4d4a4c)',
             '&:hover': {
-              backgroundColor: '#d60cb8',
+              backgroundColor: '#4d4a4c',
             },
           }}
         >

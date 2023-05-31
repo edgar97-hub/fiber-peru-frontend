@@ -1,44 +1,52 @@
-.FiberOpticCoverage {
+.portfolioServices {
   display: flex;
   // margin: 0 -15px -15px -15px;
   align-items: start;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   margin-top: 20px;
   padding-top: 60px;
   margin-bottom: 30px;
-  //border: 5px solid #0d0d0f;
-  //background-image: url("../../images/bg-art-5.png");
-  background-position: center;
-  background-color: #525051;
-  opacity: 1;
-  font-family: 'MADETommySoftRegular', sans-serif;
+   //border: 5px solid #0d0d0f;
+   //background-image: url("../../images/bg-art-5.png");
+   background-repeat: no-repeat;
+   background-color: #3f3e3f;
+   opacity: 1;
+   font-family: "MADETommySoftRegular",sans-serif;
   justify-content: center;
-  background-image: url('https://winempresas.pe/img/cobertura/banner.jpg?ver=1.8');
-  background-position:  10% 45% 50% 20%; 
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 400px;
-  .infoColumnChooseUs {
+
+
+  //https://winempresas.pe/img/services/ciberseguridad-para-empresas/home/banner-xs.jpg?ver=1.8
+
+  // background-image: url("https://winempresas.pe/img/services/ciberseguridad-para-empresas/home/banner-xs.jpg?ver=1.8");
+  //  //background-position:  10% 45% 50% 90%; 
+  //  background-position: center right;
+
+  //  background-repeat: no-repeat;
+  //  background-size: 30%;
+   height: 600px;
+   .infoColumnChooseUs {
     margin-bottom: 15px;
     padding-right: 75px;
     padding-left: 75px;
     width: 40%;
     //border: 1px solid #0d0d0f;
-
+  
+  
     @media screen and (max-width: 768px) {
       width: 100%;
       display: flex;
       justify-content: center;
       padding-top: 20px;
     }
-
+  
+      
     .textWrapperChooseUs {
       // max-width: 540px;
       padding-top: 0;
       padding-bottom: 10px;
       //border: 1px solid #0d0d0f;
-
+      
       .headingChooseUs {
         margin-bottom: 14px;
         padding-top: 0;
@@ -53,7 +61,7 @@
           font-size: 23px !important;
         }
       }
-
+  
       .subtitleChooseUs {
         padding: 14px;
         font-size: 18px;
@@ -67,13 +75,14 @@
           font-size: 15px !important;
         }
       }
-
+  
       .itemChooseUs {
         display: flex;
         flex-direction: column;
         // border: 1px solid #0d0d0f;
         padding: 10px;
-
+       
+  
         .itemTitleChooseUs {
           margin-bottom: 5px;
           padding-top: 0;
@@ -87,7 +96,7 @@
           }
         }
         .itemDescriptionChooseUs {
-          font-size: 15px !important;
+          font-size: 18px;
           color: #ced6e2;
           @media screen and (max-width: 960px) {
             font-size: 13px !important;
@@ -102,10 +111,10 @@
         }
       }
     }
-
+  
     .imgWrapperChooseUs {
       width: 100%;
-      // min-height: 100%;
+      //height: 120%;
       //border: 1px solid #0d0d0f;
     }
     .infoColumnDescriptionChooseUs {
@@ -116,55 +125,60 @@
     }
     .imgChooseUs {
       padding-right: 0;
-      border-radius: 9px;
+      //border-radius: 9px;
       width: 100%;
-      max-height: 300px;
-      // border: 1px solid #0d0d0f;
+
+      max-height: 350px;
+      //border: 1px solid #0d0d0f;
     }
   }
 }
-/** FiberNetworkOpticsinPeru*/
 
-.FiberNetworkOpticsinPeru {
+
+
+.telecominications {
   display: flex;
   // margin: 0 -15px -15px -15px;
   align-items: start;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   margin-top: 20px;
-  padding-top: 60px;
-  margin-bottom: 30px;
-  //border: 5px solid #0d0d0f;
-  //background-image: url("../../images/bg-art-5.png");
-  background-position: center;
-  background-color: #525051;
-  opacity: 1;
-  font-family: 'MADETommySoftRegular', sans-serif;
+  padding-top: 70px;
+  //margin-bottom: 10px;
+  min-height: 532px;
+   //border: 5px solid #0d0d0f;
+   //background-image: url("../../images/bg-art-5.png");
+   //background-color: transparent;
+   background-position:  70% -25% ; 
+     
+   background-repeat: no-repeat;
+   background-image: url("https://winempresas.pe/img/nosotros/bg-lideres.jpg?ver=1.9");
+   opacity: 1;
+   font-family: "MADETommySoftRegular",sans-serif;
   justify-content: center;
-  background-position:  10% 45% 50% 20%; 
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 400px;
-  .infoColumnChooseUs {
+   .infoColumnChooseUs {
     margin-bottom: 15px;
     padding-right: 75px;
     padding-left: 75px;
     width: 40%;
     //border: 1px solid #0d0d0f;
-
+  
+  
     @media screen and (max-width: 768px) {
       width: 100%;
       display: flex;
       justify-content: center;
-      padding-top: 20px;
-    }
+      padding-top: 0px;
 
+    }
+  
+      
     .textWrapperChooseUs {
       // max-width: 540px;
       padding-top: 0;
       padding-bottom: 10px;
       //border: 1px solid #0d0d0f;
-
+      
       .headingChooseUs {
         margin-bottom: 14px;
         padding-top: 0;
@@ -179,7 +193,7 @@
           font-size: 23px !important;
         }
       }
-
+  
       .subtitleChooseUs {
         padding: 14px;
         font-size: 18px;
@@ -193,13 +207,14 @@
           font-size: 15px !important;
         }
       }
-
+  
       .itemChooseUs {
         display: flex;
         flex-direction: column;
         // border: 1px solid #0d0d0f;
         padding: 10px;
-
+       
+  
         .itemTitleChooseUs {
           margin-bottom: 5px;
           padding-top: 0;
@@ -213,7 +228,7 @@
           }
         }
         .itemDescriptionChooseUs {
-          font-size: 15px !important;
+          font-size: 18px;
           color: #ced6e2;
           @media screen and (max-width: 960px) {
             font-size: 13px !important;
@@ -228,10 +243,10 @@
         }
       }
     }
-
+  
     .imgWrapperChooseUs {
       width: 100%;
-      // min-height: 100%;
+      //height: 120%;
       //border: 1px solid #0d0d0f;
     }
     .infoColumnDescriptionChooseUs {
@@ -242,10 +257,12 @@
     }
     .imgChooseUs {
       padding-right: 0;
-      border-radius: 9px;
+      //border-radius: 9px;
       width: 100%;
-      max-height: 300px;
-      // border: 1px solid #0d0d0f;
+
+      max-height: 350px;
+      //border: 1px solid #0d0d0f;
     }
   }
 }
+ 

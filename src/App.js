@@ -21,7 +21,14 @@ import {
   Yanahuara,
   PageAboutus,
   PageRegulation,
-  PageFiberOpticCoverage
+  PageFiberOpticCoverage,
+  PageWorkWithus,
+  PageBenefits,
+  PageManagedServices,
+  PageCybersecurityBusinesses,
+  PageContact,
+  PageInterconnectionVenuesDarkFiber,
+  PageDigitalTelevision
 } from './pages'
 import SignUp from './components/home/miPortal/signUp/SignUp'
 
@@ -46,6 +53,14 @@ function App() {
         <Route path="/quienes-somos" element={<PageAboutus />} />
         <Route path="/regulacion" element={<PageRegulation />} />
         <Route path="/fibra-optica-cobertura" element={<PageFiberOpticCoverage />} />
+
+        <Route path="/trabaja-con-nosotros" element={<PageWorkWithus />} />
+        <Route path="/beneficios" element={<PageBenefits />} />
+        <Route path="/servicios-gestionados" element={<PageManagedServices />} />
+        <Route path="/seguridad-gestionada" element={<PageCybersecurityBusinesses />} />
+        <Route path="/empresa-contacto" element={<PageContact />} />
+        <Route path="/interconexion-sedes-fibra-oscura" element={<PageInterconnectionVenuesDarkFiber />} />
+        <Route path="/television-digital" element={<PageDigitalTelevision />} />
 
       </Routes>
     </BrowserRouter>

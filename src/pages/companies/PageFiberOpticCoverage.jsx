@@ -4,9 +4,9 @@ import Ourapproach from '../../components/companies/menus/knowus/aboutus/Ourappr
 import OurCertifications from '../../components/companies/menus/knowus/aboutus/OurCertifications'
 import Telecominications from '../../components/companies/menus/knowus/aboutus/Telecominications'
 import Ourvalues from '../../components/companies/menus/knowus/aboutus/ourvalues/Ourvalues'
-import Regulation from '../../components/companies/menus/test1/Regulation'
-import FiberOpticCoverage from '../../components/companies/menus/coberFibraoptica/FiberOpticCoverage'
-import FiberNetworkOpticsinPeru from '../../components/companies/menus/coberFibraoptica/FiberNetworkOpticsinPeru'
+import FiberOpticCoverage from '../../components/companies/menus/knowus/fiberOpticCoverage/FiberOpticCoverage'
+import FiberNetworkOpticsinPeru from '../../components/companies/menus/knowus/fiberOpticCoverage/FiberNetworkOpticsinPeru'
+import Contacto from '../../components/companies/menus/knowus/fiberOpticCoverage/Contacto'
 
 import Footer from '../../components/companies/footer/Footer'
 
@@ -16,7 +16,7 @@ export default function PageFiberOpticCoverage() {
       <Header />
       <FiberOpticCoverage />
       <FiberNetworkOpticsinPeru />
-
+      <Contacto />
       <Footer />
 
     </div>

@@ -1,0 +1,269 @@
+.benefits {
+  display: flex;
+  // margin: 0 -15px -15px -15px;
+  align-items: start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-top: 60px;
+  margin-bottom: 30px;
+  //border: 5px solid #0d0d0f;
+  //background-image: url("../../images/bg-art-5.png");
+  background-position: center;
+  background-color: #525051;
+  opacity: 1;
+  font-family: 'MADETommySoftRegular', sans-serif;
+  justify-content: center;
+  background-image: url('https://winempresas.pe/img/ingenio/banner_1_ingenio-1.jpg?ver=1.7');
+  background-position:  10% 45% 50% 20%; 
+  background-repeat: no-repeat;
+  background-size: 80%;
+  height: 600px;
+  .infoColumnChooseUs {
+    margin-bottom: 15px;
+    padding-right: 75px;
+    padding-left: 75px;
+    width: 40%;
+    //border: 1px solid #0d0d0f;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+    }
+
+    .textWrapperChooseUs {
+      // max-width: 540px;
+      padding-top: 0;
+      padding-bottom: 10px;
+      //border: 1px solid #0d0d0f;
+
+      .headingChooseUs {
+        margin-bottom: 14px;
+        padding-top: 0;
+        margin-top: 0;
+        font-size: 30px;
+        line-height: 1.1;
+        font-weight: 600;
+        color: #eaecf1;
+        //border: 1px solid #0d0d0f;
+        text-align: center;
+        @media screen and (max-width: 960px) {
+          font-size: 23px !important;
+        }
+      }
+
+      .subtitleChooseUs {
+        padding: 14px;
+        font-size: 18px;
+        font-weight: 500;
+        min-width: 100%;
+        //font-family: inherit;
+        line-height: 24px;
+        color: #d7dce4;
+        text-align: center;
+        @media screen and (max-width: 960px) {
+          font-size: 15px !important;
+        }
+      }
+
+      .itemChooseUs {
+        display: flex;
+        flex-direction: column;
+        // border: 1px solid #0d0d0f;
+        padding: 10px;
+
+        .itemTitleChooseUs {
+          margin-bottom: 5px;
+          padding-top: 0;
+          margin-top: 0;
+          font-size: 15px;
+          line-height: 1.1;
+          font-weight: 700;
+          color: #edf5f5;
+          @media screen and (max-width: 960px) {
+            font-size: 13px !important;
+          }
+        }
+        .itemDescriptionChooseUs {
+          font-size: 18px;
+          color: #ced6e2;
+          @media screen and (max-width: 960px) {
+            font-size: 13px !important;
+          }
+        }
+        .itemDescriptionChooseUs {
+          font-size: 18px;
+          color: #ced6e2;
+          @media screen and (max-width: 960px) {
+            font-size: 13px !important;
+          }
+        }
+      }
+    }
+
+    .imgWrapperChooseUs {
+      width: 100%;
+      // min-height: 100%;
+      //border: 1px solid #0d0d0f;
+    }
+    .infoColumnDescriptionChooseUs {
+      padding: 20px;
+      font-size: 18px;
+      //font-family: inherit;
+      color: #708198;
+    }
+    .imgChooseUs {
+      padding-right: 0;
+      border-radius: 9px;
+      width: 100%;
+      max-height: 300px;
+      // border: 1px solid #0d0d0f;
+    }
+  }
+}
+
+
+/** our benefits */
+
+#our-benefits {
+  // padding: 50px 0 160px;
+  padding-top: 80px;
+  padding-bottom: 50px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  // background: #e7e8eb;
+  //border: 1px solid #0d0d0f;
+  font-family: 'MADETommySoftRegular', sans-serif;
+  background-color: #494a4b;
+  .wrapperTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    margin-bottom: 50px;
+    //border: 1px solid #0d0d0f;
+
+    .title {
+      color: #f3f0f3;
+      font-size: 38px;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      text-align: center;
+      padding: auto;
+      //border: 1px solid #0d0d0f;
+      padding-left: 25px;
+      padding-right: 25px;
+      @media screen and (max-width: 960px) {
+        font-size: 20px;
+      }
+    }
+
+    .subtitle {
+      //border: 1px solid #0d0d0f;
+      text-align: center;
+      min-width: 50%;
+      padding: 20px;
+      font-size: 25px;
+      color: #494a4b;
+      border-radius: 9px;
+      background-color: #f8f6f8;
+      margin-left: 25px;
+      margin-right: 25px;
+      @media screen and (max-width: 960px) {
+        font-size: 20px;
+      }
+    }
+  }
+  .items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0px !important;
+    width: 60%;
+
+    //box-shadow: 0.5px 3px 3px 0.5px grey;
+    border-radius: 9px;
+    @media screen and (max-width: 960px) {
+      width: 100% !important;
+    }
+  }
+  .plan-benefits-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px !important;
+    width: 30%;
+    border: 1.1px solid #868484 !important;
+    background-color: #f8f6f8;
+
+    border: 0px;
+    //box-shadow: 0.5px 3px 3px 0.5px grey;
+    border-radius: 9px;
+    @media screen and (max-width: 960px) {
+      width: 45% !important;
+      margin: 0px !important;
+      font-size: 12px;
+    }
+
+    .title {
+      text-align: center;
+      text-transform: capitalize;
+      color: #d60cb8;
+      font-size: 17px;
+      line-height: 1.2rem;
+      padding-top: 30px;
+      margin-bottom: 9px;
+      padding-bottom: 15px;
+      //border-bottom: 3px solid rgb(80, 80, 78);
+      border-bottom: 0 !important;
+      width: 80%;
+
+      @media screen and (max-width: 960px) {
+        font-size: 13px;
+        padding-top: 10px;
+      }
+    }
+
+    .serviceImg {
+      height: 150px;
+      width: 150px;
+      border-radius: 119px !important;
+      @media screen and (max-width: 960px) {
+        width: 130px;
+        height: 130px;
+        margin: 0px !important;
+      }
+      @media screen and (max-width: 1250px) {
+        width: 130px;
+        height: 130px;
+        margin: 0px !important;
+      }
+      //border: 3.1px solid #b3b1b1 !important;
+      // &:hover {
+      //   transform: scale(1.06);
+      //   transition: all 0.3s ease-out;
+      //   cursor: pointer;
+      // }
+    }
+
+    @media screen and (max-width: 1250px) {
+      width: 20%;
+      margin: 15px !important;
+    }
+
+    @media screen and (max-width: 960px) {
+      width: 60%;
+      margin: 9px !important;
+    }
+  }
+}

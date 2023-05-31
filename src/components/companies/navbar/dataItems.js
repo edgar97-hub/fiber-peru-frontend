@@ -17,16 +17,13 @@ export const dataItems = [
       },
       {
         title: 'Trabaja con nosostros',
-        url: '/trabaja-con-nosostros',
+        url: '/trabaja-con-nosotros',
       },
       {
         title: 'Beneficios',
         url: '/beneficios',
       },
-      {
-        title: 'Obras por impuesto',
-        url: '/obras-por-impuesto',
-      },
+      
     ],
   },
   {
@@ -39,7 +36,7 @@ export const dataItems = [
         submenu: [
           {
             title: 'Interconexion de sedes por fibra oscura',
-            url: 'web-design',
+            url: '/interconexion-sedes-fibra-oscura',
           },
           {
             title: 'Internet para empresas',
@@ -53,24 +50,24 @@ export const dataItems = [
       },
       {
         title: 'Servicios Gestionados',
-        url: 'web-dev',
+        url: '/servicios-gestionados',
       },
       {
         title: 'Seguridad Gestionada',
-        url: 'seo',
+        url: '/seguridad-gestionada',
       },
-      {
-        title: 'Data center',
-        url: 'seo',
-      },
-      {
-        title: 'Contáctanos',
-        url: 'seo',
-      },
+      // {
+      //   title: 'Data center',
+      //   url: 'seo',
+      // },
+      // {
+      //   title: 'Contáctanos',
+      //   url: 'seo',
+      // },
     ],
   },
   {
     title: 'Contáctanos',
-    url: '/contact',
+    url: '/empresa-contacto',
   },
 ]

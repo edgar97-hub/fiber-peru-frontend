@@ -4,17 +4,17 @@ import Ourapproach from '../../components/companies/menus/knowus/aboutus/Ourappr
 import OurCertifications from '../../components/companies/menus/knowus/aboutus/OurCertifications'
 import Telecominications from '../../components/companies/menus/knowus/aboutus/Telecominications'
 import Ourvalues from '../../components/companies/menus/knowus/aboutus/ourvalues/Ourvalues'
-import Regulation from '../../components/companies/menus/knowus/regulation/Regulation'
-import LinksPdf2 from '../../components/companies/menus/knowus/regulation/LinksPdf2'
+import Contact from '../../components/companies/menus/contact/Contact'
+import FormContact from '../../components/companies/menus/contact/FormContact'
 
 import Footer from '../../components/companies/footer/Footer'
 
-export default function PageRegulation() {
+export default function PageContact() {
   return (
     <div class="wrapper">
       <Header />
-      <Regulation />
-      <LinksPdf2 />
+      <Contact />
+      <FormContact />
       <Footer />
 
     </div>
