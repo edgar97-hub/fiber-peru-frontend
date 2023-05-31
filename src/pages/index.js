@@ -9,3 +9,5 @@ export { default as Inquiries } from './inquiries/Inquiries';
 export { default as Tiabaya } from './districts/Tiabaya';
 export { default as Yanahuara } from './districts/Yanahuara';
 export { default as PageAboutus } from './companies/PageAboutus';
+export { default as PageRegulation } from './companies/PageRegutacion';
+export { default as PageFiberOpticCoverage } from './companies/PageFiberOpticCoverage';

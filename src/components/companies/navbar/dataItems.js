@@ -9,23 +9,23 @@ export const dataItems = [
       },
       {
         title: 'regulación',
-        url: 'web-dev',
+        url: '/regulacion',
       },
       {
         title: 'Cobertura en fibra óptica',
-        url: 'seo',
+        url: '/fibra-optica-cobertura',
       },
       {
         title: 'Trabaja con nosostros',
-        url: 'seo',
+        url: '/trabaja-con-nosostros',
       },
       {
         title: 'Beneficios',
-        url: 'seo',
+        url: '/beneficios',
       },
       {
         title: 'Obras por impuesto',
-        url: 'seo',
+        url: '/obras-por-impuesto',
       },
     ],
   },
