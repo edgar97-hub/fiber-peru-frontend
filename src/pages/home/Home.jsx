@@ -1,7 +1,7 @@
 import { Navbar } from "../../components";
 import Video from "../../video/Video";
 import Header from "../../components/home/navbar/Header";
-import Services from "../../components/home/services/Services3";
+import Services from "../../components/home/services/HomeService";
 import ParticlesDemo from "./Particles";
 import GoogleMap from "../../components/home/googlemaps/GoogleMap";
 import WhatsappWidget from "../../components/home/whatsappWidget/WhatsappWidget";
@@ -19,13 +19,13 @@ export default function Home() {
             <Header />
             <Video />
             <Services />
-            {/* <GooleMapsTest /> */}
+            <GooleMapsTest />
             <WhyChooseFiber />
             <PlanBenefits />
             <PlanInfo />
             <TermsAndConditions />
             <Footer />
-        |   <WhatsappWidget />
+            |   <WhatsappWidget />
         </div>
     );
 }

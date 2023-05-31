@@ -41,9 +41,10 @@ export default function SignInSide() {
         password: data.get('password'),
       }
       console.log(values)
-
+      var localhost = "http://localhost:5001"
+      var remoteServer = "https://node-app-fiber-peru.onrender.com"
       const loggedInResponse = await fetch(
-        'http://localhost:5001' + '/api/v1/login',
+        localhost + '/api/v1/login',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -58,6 +59,7 @@ export default function SignInSide() {
           message: 'guardado con éxito',
           type: 'success',
         })
+        localStorage.setItem('token', response.token)
         navigate('/dashboard')
         console.log(response)
 

@@ -75,16 +75,32 @@ export default function InquiriesTable() {
 
   useEffect(() => {
 
-
+    // var localhost = "http://localhost:5001"
+    // var remoteServer = "https://node-app-fiber-peru.onrender.com"
+    // var token = localStorage.getItem('token')
+    //  async function getUsers(){
+    //   const loggedInResponse = await fetch(
+    //     localhost + '/api/v1/users',
+    //     {
+    //       method: 'GET',
+    //       headers: { 'Content-Type': 'application/json',
+    //       'Authorization': 'Bearer '+token },
+    //     }
+    //   )
+    //   const response = await loggedInResponse.json()
     //users.push({ ...doc.data(), id: doc.id });
 
      async function getUsers(){
+
+      var localhost = "http://localhost:5001"
+    var remoteServer = "https://node-app-fiber-peru.onrender.com"
+    var token = localStorage.getItem('token')
       const loggedInResponse = await fetch(
-        'http://localhost:5001' + '/api/v1/users/consultas',
+        localhost + '/api/v1/users/consultas',
         {
           method: 'GET',
-          headers: { 'Content-Type': 'application/json' },
-          // body: JSON.stringify(values),
+          headers: { 'Content-Type': 'application/json',
+          'Authorization': 'Bearer '+token },
         }
       )
       const response = await loggedInResponse.json()

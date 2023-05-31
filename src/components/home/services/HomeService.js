@@ -1,57 +1,21 @@
 import React, { useState, useEffect } from "react";
-import "./services2.scss";
-import "./services.scss";
+import "./slider.scss";
+import "./homeService.scss";
 
 import DoneIcon from '@mui/icons-material/Done';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import MouseParticles from "react-mouse-particles";
-import { startCanvas } from "./particleTest";
-import { startCanvas2 } from "./particle2";
-import { startCanvas3 } from "./particle3";
+import { startCanvas } from "./test/particleTest";
+import { startCanvas2 } from "./test/particle2";
+import { startCanvas3 } from "./test/particle3";
 import { start } from "./Slider";
 
-function Services() {
+function HomeService() {
 
 
     useEffect(() => {
-        var canvas = document.getElementById("nokey");
-
-        var can_w = parseInt(canvas?.getAttribute("width"));
-        var can_h = parseInt(canvas?.getAttribute("height"));
-
-        if (canvas && can_w && can_h) {
-            // canvas.setAttribute("width", window.innerWidth);
-            // canvas.setAttribute("height", window.innerHeight);
-            // console.log("width", window.innerWidth);
-            // console.log("height", window.innerHeight);
-            // var dataUrl = canvas.toDataURL();
-            // console.log(dataUrl);
-            // document.querySelector(".infoSec").style.background =
-            // "url(" + dataUrl + ")";
-
-            startCanvas();
-
-            //var dataUrl = canvas.toDataURL();
-            //console.log(dataUrl)
-            //document.getElementById('test').style.background = 'url(' + dataUrl + ')'
-        }
-
-        var canvas2 = document.getElementById("nokey2");
-        var can_w2 = parseInt(canvas2?.getAttribute("width"));
-        var can_h2 = parseInt(canvas2?.getAttribute("height"));
-
-        if (canvas2 && can_w2 && can_h2) {
-            startCanvas2();
-        }
-
-        var canvas3 = document.getElementById("nokey3");
-        var can_w3 = parseInt(canvas3?.getAttribute("width"));
-        var can_h3 = parseInt(canvas3?.getAttribute("height"));
-
-        if (canvas3 && can_w3 && can_h3) {
-            startCanvas3();
-        }
+     
         start()
     }, []);
 
@@ -59,7 +23,7 @@ function Services() {
 
 
     return (
-        <div>
+        <div className="home-service">
             <div className="wrapper-title">
                 <h1 className="title">ELIGE LA VELOCIDAD DE INTERNET
                     QUE MÁS SE AJUSTE A TUS NECESIDADES</h1>
@@ -73,7 +37,7 @@ function Services() {
                 <div class="carousel">
                     <div className="rrr img-test">
                         <div className="header-information">Sin plazo de permanecia ni penalidades</div>
-                        <div id="test">
+                        <div id="plan-service">
                             <h2 className="title">Plan Hogar
                             </h2>
                             <h2 className="sub-title">40 Mbps
@@ -102,7 +66,7 @@ function Services() {
 
                     <div className="rrr img-test">
                         <div className="header-information">Sin plazo de permanecia ni penalidades</div>
-                        <div id="test">
+                        <div id="plan-service">
                             <h2 className="title">Plan Gamer
                             </h2>
                             <h2 className="sub-title">80 Mbps
@@ -131,7 +95,7 @@ function Services() {
                     </div>
                     <div className="rrr img-test">
                         <div className="header-information">Sin plazo de permanecia ni penalidades</div>
-                        <div id="test">
+                        <div id="plan-service">
                             <h2 className="title">Plan premiun
                             </h2>
                             <h2 className="sub-title">120 Mbps
@@ -160,7 +124,7 @@ function Services() {
                     </div>
                     <div className="rrr img-test">
                         <div className="header-information">Sin plazo de permanecia ni penalidades</div>
-                        <div id="test">
+                        <div id="plan-service">
                             <h2 className="title">Plan Streaming
                             </h2>
                             <h2 className="sub-title">40 Mbps
@@ -190,7 +154,7 @@ function Services() {
 
                     <div className="rrr img-test">
                         <div className="header-information">Sin plazo de permanecia ni penalidades</div>
-                        <div id="test">
+                        <div id="plan-service">
                             <h2 className="title">Plan Streaming
                             </h2>
                             <h2 className="sub-title">40 Mbps
@@ -227,4 +191,4 @@ function Services() {
 
     );
 }
-export default Services;
+export default HomeService;

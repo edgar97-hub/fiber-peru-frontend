@@ -292,7 +292,8 @@ function ResponsiveDrawer({ children }) {
 		// );
 	};
 	function logout(){
-		
+		localStorage.removeItem("token");
+		navigate('/mi-portal')
 	}
 	const drawer = (
 		<div

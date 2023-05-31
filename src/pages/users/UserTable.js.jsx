@@ -75,18 +75,20 @@ export default function UserTable() {
 
 
     //users.push({ ...doc.data(), id: doc.id });
-
+    var localhost = "http://localhost:5001"
+    var remoteServer = "https://node-app-fiber-peru.onrender.com"
+    var token = localStorage.getItem('token')
      async function getUsers(){
       const loggedInResponse = await fetch(
-        'http://localhost:5001' + '/api/v1/users',
+        localhost + '/api/v1/users',
         {
           method: 'GET',
-          headers: { 'Content-Type': 'application/json' },
-          // body: JSON.stringify(values),
+          headers: { 'Content-Type': 'application/json',
+          'Authorization': 'Bearer '+token },
         }
       )
       const response = await loggedInResponse.json()
-      console.log(response.userMap)
+      console.log(response)
     setRecords(response.userMap);
 
     }

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import './whyChooseFiber.scss'
+import './digitalTelevision.scss'
 //import img from '../../../assets/images/fibreoptica.jpg'
 
 function DigitalTelevision() {
   return (
-    <div className="infoRowChooseUs">
+    <div className="digitalTelevision">
       <div className="infoColumnChooseUs">
         <div className="textWrapperChooseUs">
           {/* <h1 className="headingChooseUs">POR QUÉ ELEGIR FIBER PERU?</h1>

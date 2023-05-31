@@ -31,6 +31,7 @@ import {
   PageDigitalTelevision
 } from './pages'
 import SignUp from './components/home/miPortal/signUp/SignUp'
+import Protected from './protectRoute/Protected'
 
 function App() {
   return (
@@ -44,8 +45,16 @@ function App() {
         <Route path="/mi-portal" element={<MiPortal />} />
         <Route path="/registro" element={<SignUp />} />
         <Route path="/dashboard" element={<Users />} />
-        <Route path="/usuarios" element={<Users />} />
-        <Route path="/consultas" element={<Inquiries />} />
+        <Route path="/usuarios"  element={
+           <Protected >
+             <Users />
+           </Protected>
+         }  />
+        <Route path="/consultas"  element={
+          <Protected >
+            <Inquiries />
+          </Protected>
+        } />
         <Route path="/tiabaya" element={<Tiabaya />} />
         <Route path="/yanahuara" element={<Yanahuara />} />
 

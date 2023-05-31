@@ -289,7 +289,7 @@ export function startCanvas1() {
 
 
     initBalls(BALL_NUM);
-    window.requestAnimationFrame(render) 
+    window.requestAnimationFrame(render)
   }
   goMovie();
 
@@ -318,7 +318,7 @@ export function startCanvas1() {
     mouse_ball.x = e.pageX;
     mouse_ball.y = e.pageY;
     // console.log(mouse_ball);
-     initCanvas();
+    initCanvas();
   });
 
 

@@ -61,7 +61,7 @@ function Services() {
 
             <input type="radio" id="image1" name="image" checked />
             <input type="radio" id="image2" name="image" />
-            <input type="radio" id="image3" name="image" /> 
+            <input type="radio" id="image3" name="image" />
 
             <div className="wrapper-title">
                 <h1 className="title">ELIGE LA VELOCIDAD DE INTERNET

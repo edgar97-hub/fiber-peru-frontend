@@ -1,7 +1,7 @@
 export const dataItems = [
   {
     title: 'Conócenos',
-    url: '/',
+    url: '/empresas',
     submenu: [
       {
         title: '¿Quiénes somos?',

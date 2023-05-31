@@ -1,8 +1,8 @@
 import Canvas2Image from "./canvas2image";
 
-export function startCanvas3() {
+export function startCanvas2() {
 
-  var canvas = document.getElementById("nokey3");
+  var canvas = document.getElementById("nokey2");
   var can_w = parseInt(canvas.getAttribute("width"));
   var can_h = parseInt(canvas.getAttribute("height"));
   var ctx = canvas.getContext("2d");
@@ -288,7 +288,7 @@ export function startCanvas3() {
 
 
     initBalls(BALL_NUM);
-    window.requestAnimationFrame(render) 
+    window.requestAnimationFrame(render)
   }
   goMovie();
 
@@ -317,7 +317,7 @@ export function startCanvas3() {
     mouse_ball.x = e.pageX;
     mouse_ball.y = e.pageY;
     // console.log(mouse_ball);
-     initCanvas();
+    initCanvas();
   });
 
 
