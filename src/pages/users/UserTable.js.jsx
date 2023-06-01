@@ -80,7 +80,7 @@ export default function UserTable() {
     var token = localStorage.getItem('token')
      async function getUsers(){
       const loggedInResponse = await fetch(
-        localhost + '/api/v1/users',
+        remoteServer + '/api/v1/users',
         {
           method: 'GET',
           headers: { 'Content-Type': 'application/json',

@@ -96,7 +96,7 @@ export default function InquiriesTable() {
     var remoteServer = "https://node-app-fiber-peru.onrender.com"
     var token = localStorage.getItem('token')
       const loggedInResponse = await fetch(
-        localhost + '/api/v1/users/consultas',
+        remoteServer + '/api/v1/users/consultas',
         {
           method: 'GET',
           headers: { 'Content-Type': 'application/json',

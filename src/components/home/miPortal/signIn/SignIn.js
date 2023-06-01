@@ -44,7 +44,7 @@ export default function SignInSide() {
       var localhost = "http://localhost:5001"
       var remoteServer = "https://node-app-fiber-peru.onrender.com"
       const loggedInResponse = await fetch(
-        localhost + '/api/v1/login',
+        remoteServer + '/api/v1/login',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

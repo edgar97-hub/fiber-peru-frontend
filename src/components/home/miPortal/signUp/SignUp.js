@@ -58,9 +58,10 @@ export default function SignUp() {
       //   'http://localhost:5001' + '/api/v1/public/register',
       //   details
       // )
-
+      var localhost = "http://localhost:5001"
+      var remoteServer = "https://node-app-fiber-peru.onrender.com"
       const loggedInResponse = await fetch(
-        'http://localhost:5001' + '/api/v1/public/register',
+        remoteServer + '/api/v1/public/register',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
