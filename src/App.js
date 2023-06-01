@@ -28,7 +28,9 @@ import {
   PageCybersecurityBusinesses,
   PageContact,
   PageInterconnectionVenuesDarkFiber,
-  PageDigitalTelevision
+  PageDigitalTelevision,
+  Sachaca,
+  Socabaya
 } from './pages'
 import SignUp from './components/home/miPortal/signUp/SignUp'
 import Protected from './protectRoute/Protected'
@@ -56,7 +58,9 @@ function App() {
           </Protected>
         } />
         <Route path="/tiabaya" element={<Tiabaya />} />
-        <Route path="/yanahuara" element={<Yanahuara />} />
+        <Route path="/hunter" element={<Yanahuara />} />
+        <Route path="/sachaca" element={<Sachaca />} />
+        <Route path="/socabaya" element={<Socabaya />} />
 
         {/** routes companies */}
         <Route path="/quienes-somos" element={<PageAboutus />} />

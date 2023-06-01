@@ -40,6 +40,8 @@ const Video = () => {
           <div className="description">Internet hogar residencial</div>
         </div>
       </div>
+
+      
     )
   }
   if (currentIndex) {

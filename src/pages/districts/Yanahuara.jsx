@@ -8,7 +8,7 @@ import Services from "../../components/home/services/HomeService";
 import TermsAndConditions from "../../components/home/termsAndConditions/TermsAndConditions";
 import Footer from "../../components/home/footer/Footer";
 
-export default function Home() {
+export default function pageYanahuara() {
   return (
     <div class="wrapper">
       <Header/>

@@ -29,10 +29,27 @@ export const dataItems = [
         title: 'Tiabaya',
         url: '/tiabaya',
       },
+      // {
+      //   title: 'yanahuara',
+      //   url: '/yanahuara',
+      // },
       {
-        title: 'yanahuara',
-        url: '/yanahuara',
+        title: 'sachaca',
+        url: '/sachaca',
       },
+      {
+        title: 'hunter',
+        url: '/hunter',
+      },
+      {
+        title: 'socabaya',
+        url: '/socabaya',
+      },
+      // {
+      //   title: 'hunter',
+      //   url: '/hunter',
+      // },
+
     ],
   },
   {

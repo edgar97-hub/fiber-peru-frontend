@@ -8,6 +8,9 @@ export { default as Users } from './users/Users';
 export { default as Inquiries } from './inquiries/Inquiries';
 export { default as Tiabaya } from './districts/Tiabaya';
 export { default as Yanahuara } from './districts/Yanahuara';
+export { default as Sachaca } from './districts/Sachaca';
+export { default as Socabaya } from './districts/Socabaya';
+
 export { default as PageAboutus } from './companies/PageAboutus';
 export { default as PageRegulation } from './companies/PageRegutacion';
 export { default as PageFiberOpticCoverage } from './companies/PageFiberOpticCoverage';

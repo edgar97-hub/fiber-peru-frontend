@@ -41,7 +41,7 @@ function Yanahuara() {
     <div className="tiabaya">
       <div className="plan-info-column">
         <div className="plan-info-text-wrapper">
-          <h1 className="headingChooseUs">Ya llegó a Yanahuara
+          <h1 className="headingChooseUs">Ya llegó a hunter
                                                 el Internet hogar
                                                 100% fibra óptica de fiber-peru
           </h1>
