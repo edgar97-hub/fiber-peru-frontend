@@ -16,7 +16,7 @@ const Video = () => {
   const Videotest = () => {
     return (
       <>
-        <video src={BgVideo} autoPlay muted loop class="video-bg" />
+        <video src={BgVideo} autoPlay muted loop className="video-bg" />
         <div className="bg-overlay"></div>
         <div className="home-text">
           <h1 className='video-title'>The Bubu Island</h1>

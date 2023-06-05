@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './sachaca.scss'
-import './video.scss'
+//import './video.scss'
 
 import Button from '@mui/material/Button'
 import InputLabel from '@mui/material/InputLabel'
@@ -45,23 +45,24 @@ function Sachaca() {
     return (
       <>
         <video src={BgVideo} autoPlay muted loop class="video-bg" />
-        <div className="bg-overlay"></div>
-        <div className="home-text">
+          <div className="bg-overlay"></div> 
+          <SachacaCom/> 
+       {/* <div className="home-text">
           <h1 className='video-title'>The Bubu Island</h1>
           <p className='video-description'>Come live out your ideal vacation with us</p>
         </div>
-        <div className="home-btn">Explore</div>
+        <div className="home-btn">Explore</div> */}
       </>
     )
   }
 
-  return (
-    <div className="sachaca sachaca-video " style={{
+  const SachacaCom = ()=>{
 
-    }}>
-          <Videotest />
-
-      <div className="plan-info-column">
+    return ( 
+    
+      <>
+ 
+  <div className="plan-info-column">
         <div className="plan-info-text-wrapper">
           <h1 className="headingChooseUs">Ya llegó a Sachaca
           el Internet hogar
@@ -81,14 +82,6 @@ function Sachaca() {
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
-
       <div className="plan-info-column">
         <div className="plan-info-video contact-form">
         <Typography component="h1" variant="h5" sx={
@@ -372,8 +365,13 @@ function Sachaca() {
             Enviar
           </Button>
         </div>
-        <div className="contact-form"></div>
-      </div>
+      </div>  
+      </>
+   )
+  }
+  return (
+    <div className="sachaca sachaca-video "  >
+          <Videotest />
     </div>
   )
 }
