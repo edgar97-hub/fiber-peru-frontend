@@ -1,0 +1,26 @@
+import Header from '../../../components/home/navbar/Header'
+import WhatsappWidget from '../../../components/home/whatsappWidget/WhatsappWidget'
+import Tiabaya from '../../../components/home/menus/districts/tiabaya/Tiabaya'
+import WhyChooseFiberTiabaya from '../../../components/home/menus/districts/tiabaya/WhyChooseFiberTiabaya'
+import WifiFiberPeru from '../../../components/home/menus/districts/tiabaya/WifiFiberPeru'
+import BenefitsWifiMesh from '../../../components/home/menus/districts/tiabaya/BenefitsWifiMesh'
+import Services from '../../../components/home/services/HomeService'
+import TermsAndConditions from '../../../components/home/termsAndConditions/TermsAndConditions'
+import Footer from '../../../components/home/footer/Footer'
+
+export default function pageTiabaya() {
+  return (
+    <div class="wrapper">
+      <Header />
+      <Tiabaya />
+      <Services />
+      <WhyChooseFiberTiabaya />
+      <WifiFiberPeru />
+      <BenefitsWifiMesh />
+      <TermsAndConditions />
+      <Footer />
+      |
+      <WhatsappWidget />
+    </div>
+  )
+}

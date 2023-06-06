@@ -1,23 +1,22 @@
-export { default as Home } from './home/Home';
-export { default as PaymentMethods } from './paymentMethods/PaymentMethods';
-export { default as Contac} from './contact/PageContact';
-export { default as MiPortal} from './miPortal/MiPortal';
-export { default as Companies } from './companies/Companies';
-export { default as Dashboard } from './dashboard/Home';
-export { default as Users } from './users/Users';
-export { default as Inquiries } from './inquiries/Inquiries';
-export { default as Tiabaya } from './districts/Tiabaya';
-export { default as Yanahuara } from './districts/Yanahuara';
-export { default as Sachaca } from './districts/Sachaca';
-export { default as Socabaya } from './districts/Socabaya';
+export { default as Home } from './home/Home'
+export { default as PaymentMethods } from './home/PaymentMethods'
+export { default as Contac } from './home/PageContact'
+export { default as MiPortal } from './home/MiPortal'
+export { default as Companies } from './companies/Companies'
+export { default as Users } from './users/Users'
+export { default as Inquiries } from './inquiries/Inquiries'
+export { default as Tiabaya } from './home/districts/Tiabaya'
+export { default as Yanahuara } from './home/districts/Yanahuara'
+export { default as Sachaca } from './home/districts/Sachaca'
+export { default as Socabaya } from './home/districts/Socabaya'
 
-export { default as PageAboutus } from './companies/PageAboutus';
-export { default as PageRegulation } from './companies/PageRegutacion';
-export { default as PageFiberOpticCoverage } from './companies/PageFiberOpticCoverage';
-export { default as PageWorkWithus } from './companies/PageWorkWithus';
-export { default as PageBenefits } from './companies/PageBenefits';
-export { default as PageManagedServices } from './companies/PageManagedServices';
-export { default as PageCybersecurityBusinesses } from './companies/PageCybersecurityBusinesses';
-export { default as PageContact } from './companies/PageContact';
-export { default as PageInterconnectionVenuesDarkFiber } from './companies/PageInterconnectionVenuesDarkFiber';
-export { default as PageDigitalTelevision } from './home/PageDigitalTelevision';
+export { default as PageAboutus } from './companies/PageAboutus'
+export { default as PageRegulation } from './companies/PageRegutacion'
+export { default as PageFiberOpticCoverage } from './companies/PageFiberOpticCoverage'
+export { default as PageWorkWithus } from './companies/PageWorkWithus'
+export { default as PageBenefits } from './companies/PageBenefits'
+export { default as PageManagedServices } from './companies/PageManagedServices'
+export { default as PageCybersecurityBusinesses } from './companies/PageCybersecurityBusinesses'
+export { default as PageContact } from './companies/PageContact'
+export { default as PageInterconnectionVenuesDarkFiber } from './companies/PageInterconnectionVenuesDarkFiber'
+export { default as PageDigitalTelevision } from './home/PageDigitalTelevision'

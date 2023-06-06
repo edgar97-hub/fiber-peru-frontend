@@ -1,0 +1,130 @@
+.ourvalues {
+  //background-color: #d60cb8;
+
+  .slider-wrapper {
+    display: flex;
+    //max-width: 40%;
+    position: relative;
+    //border: 5px solid #0d0d0f;
+    background-color: #e9dfe2;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    //padding-left: 10px;
+  }
+  .slider-wrapper i {
+    top: 50%;
+    height: 44px;
+    width: 44px;
+    color: #343f4f;
+    cursor: pointer;
+    font-size: 1.15rem;
+    position: absolute;
+    //z-index: 450;
+    text-align: center;
+    line-height: 44px;
+    background: #2e2c2c;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+    border: 1px solid #7d7d81;
+  }
+  .slider-wrapper i:active {
+    transform: translateY(-50%) scale(0.9);
+  }
+  .slider-wrapper i:hover {
+    background: #dbcdcd;
+  }
+  .slider-wrapper i {
+    background: #dadada;
+    color: #d60cb8;
+  }
+  .slider-wrapper i:first-child {
+    left: 22%;
+    @media screen and (max-width: 1650px) {
+      left: 9%;
+    }
+    @media screen and (max-width: 1470px) {
+      left: 4%;
+    }
+    @media screen and (max-width: 1150px) {
+      left: 1%;
+    }
+    //display: none;
+  }
+  .slider-wrapper i:last-child {
+    right: 21%;
+    @media screen and (max-width: 1650px) {
+      right: 9%;
+    }
+    @media screen and (max-width: 1470px) {
+      right: 4%;
+    }
+    @media screen and (max-width: 1150px) {
+      right: 1%;
+    }
+  }
+  .slider-wrapper .carousel {
+    font-family: 'MADETommySoftRegular', sans-serif;
+    display: flex;
+    flex-direction: row;
+    //font-size: 0px;
+    //cursor: pointer;
+    overflow: hidden;
+    //white-space: pre;
+    scroll-behavior: smooth;
+    //border: 5px solid #0d0d0f;
+    //min-width: 150%;
+    width: 55%;
+    @media screen and (max-width: 1650px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 1470px) {
+      width: 90%;
+    }
+    @media screen and (max-width: 1150px) {
+      width: 100%;
+    }
+    @media screen and (max-width: 1000px) {
+      max-width: 100%;
+    }
+  }
+  .carousel .dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging .img-test {
+    pointer-events: none;
+  }
+  .carousel .img-test {
+    //min-height: 440px ;
+    //object-fit: cover;
+    //user-select: none;
+    // margin-left: 14px;
+    margin-right: 14px;
+    //width: calc(100% / 3);
+    //max-width: calc(100% / 3);
+    //border: 2px solid #0d0d0f;
+    &:hover {
+      //transform: scale(1.06);
+      //transition: all 0.3s ease-out;
+      //color: #0a0a0a;
+      cursor: pointer;
+    }
+  }
+  .carousel .img-test:first-child {
+    //margin-left: 100px;
+  }
+
+  @media screen and (max-width: 900px) {
+    .carousel .img-test {
+      //width: calc(100% / 2);
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .carousel .img-test {
+      //width: 100%;
+    }
+  }
+}

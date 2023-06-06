@@ -7,10 +7,10 @@ function Aboutus() {
     <div className="aboutus">
       <div className="infoColumnChooseUs">
         <div className="textWrapperChooseUs">
-          <h1 className="headingChooseUs">¿Quiénes
-somos?</h1>
+          <h1 className="headingChooseUs">¿Quiénes somos?</h1>
           <p className="subtitleChooseUs">
-          Somos fiber-peru Empresas y estamos aquí para acompañarte durante todo el viaje de la evolución digital de tu compañía. 
+            Somos fiber-peru Empresas y estamos aquí para acompañarte durante
+            todo el viaje de la evolución digital de tu compañía.
           </p>
 
           <div className="itemChooseUs">

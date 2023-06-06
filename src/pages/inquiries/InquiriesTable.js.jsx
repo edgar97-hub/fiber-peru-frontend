@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import UserDialogForm from './UserDialogForm';
+import UserDialogForm from './UserDialogForm'
 import useTable from '../../components/toolsForm/useTable'
 import Controls from '../../components/controls/Controls'
 import SearchIcon from '@mui/icons-material/Search'
@@ -7,7 +7,7 @@ import AddIcon from '@mui/icons-material/Add'
 import Popup from '../../components/toolsForm/Popup'
 import Notification from '../../components/toolsForm/Notification'
 import ConfirmDialog from '../../components/toolsForm/ConfirmDialog'
-
+import Box from '@mui/material/Box'
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 import TableBody from '@mui/material/TableBody'
@@ -17,23 +17,36 @@ import Toolbar from '@mui/material/Toolbar'
 import InputAdornment from '@mui/material/InputAdornment'
 import { makeStyles } from '@mui/styles'
 import Paper from '@mui/material/Paper'
+import axios from 'axios'
+import { insert, update, remove } from './apis'
 
 const useStyles = makeStyles((theme) => ({
-  pageContent: {
-    // margin: theme.spacing(1),
-    // padding: theme.spacing(1),
-    width: '70%',
-    border: "1px solid forestgreen",
-    overflowX: 'auto',
-    marginLeft:"15%",
-    gap:5,
-    padding:"40px"
+  roots: {
+    width: '100%',
+    //border: '3px solid forestgreen',
+    marginLeft: '20%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'end',
+    justifyContent: 'center',
+    //gap:5,
+    marginLeft: '40px',
+    marginRight: '40px',
+    //overflow: "scroll",
+    //scrollbarColor: "red orange",
   },
-  allUsers: {
-    //right: '10px'
-    //marginRight:"80px",
-    marginLeft: '20px',
-    marginBottom: '10px',
+
+  root: {
+    width: '70%',
+    marginLeft: '40%',
+    //marginTop: theme.spacing.unit * 3,
+    overflowX: 'auto',
+    //border: '3px solid forestgreen',
+    marginLeft: '20%',
+    //marginRight: '40px',
+  },
+  table: {
+    minWidth: 100,
   },
 }))
 
@@ -43,15 +56,12 @@ const headCells = [
   { id: 'documenttype', label: 'tipo de documento' },
   { id: 'Documentnumber', label: 'Número de documento' },
   { id: 'email', label: 'Email' },
-  // { id: 'mobile', label: 'Número de teléfono' },
-  // { id: 'message', label: 'mensaje' },
   { id: 'actions', label: 'Actions', disableSorting: true },
 ]
-
-export default function InquiriesTable() {
+export default function UserTable() {
   const classes = useStyles()
   const [recordForEdit, setRecordForEdit] = useState(null)
-  const [records, setRecords] = useState([{ id: '' }])
+  const [records, setRecords] = useState([])
   const [filterFn, setFilterFn] = useState({
     fn: (items) => {
       return items
@@ -70,51 +80,31 @@ export default function InquiriesTable() {
     subTitle: '',
   })
 
-  const [roles, setRoles] = useState([])
   const [loading, setLoading] = useState(false)
 
-  useEffect(() => {
-
-    // var localhost = "http://localhost:5001"
-    // var remoteServer = "https://node-app-fiber-peru.onrender.com"
-    // var token = localStorage.getItem('token')
-    //  async function getUsers(){
-    //   const loggedInResponse = await fetch(
-    //     localhost + '/api/v1/users',
-    //     {
-    //       method: 'GET',
-    //       headers: { 'Content-Type': 'application/json',
-    //       'Authorization': 'Bearer '+token },
-    //     }
-    //   )
-    //   const response = await loggedInResponse.json()
-    //users.push({ ...doc.data(), id: doc.id });
-
-     async function getUsers(){
-
-      var localhost = "http://localhost:5001"
-    var remoteServer = "https://node-app-fiber-peru.onrender.com"
+  function getData() {
+    var localhost = 'http://localhost:5001'
+    var remoteServer = 'https://node-app-fiber-peru.onrender.com'
     var token = localStorage.getItem('token')
-      const loggedInResponse = await fetch(
-        remoteServer + '/api/v1/users/consultas',
-        {
-          method: 'GET',
-          headers: { 'Content-Type': 'application/json',
-          'Authorization': 'Bearer '+token },
-        }
-      )
-      const response = await loggedInResponse.json()
-      console.log(response.userMap)
-      if(response.userMap){
-        setRecords(response.userMap);
 
-      }else{
-        setRecords([]);
-      }
-
-    }
-    getUsers()
-
+    // axios
+    //   .get(localhost + '/api/v1/planes-internet', {
+    //     headers: {
+    //       Authorization: `Bearer ${token}`,
+    //     },
+    //   })
+    //   .then((response) => {
+    //     console.log(response)
+    //     if (response.data) {
+    //       setRecords(response.data)
+    //     }
+    //   })
+    //   .catch((err) => {
+    //     console.log(err)
+    //   })
+  }
+  useEffect(() => {
+    getData()
   }, [])
 
   const { TblContainer, TblHead, TblPagination, recordsAfterPagingAndSorting } =
@@ -135,37 +125,34 @@ export default function InquiriesTable() {
 
   async function addOrEdit(value, resetForm) {
     setLoading(true)
-    if (value.id == 0) {
-      try {
-        await postData(
-          'https://us-central1-daphtech-31758.cloudfunctions.net/user',
-          value
-        )
-      } catch (error) {
-        alert(error)
-      }
-    } else {
-      try {
-        await updateData(
-          'https://us-central1-daphtech-31758.cloudfunctions.net/user',
-          value
-        )
+    try {
+      if (value.id == 0) {
+        var result = await insert(value)
+        if (result.error) throw new EvalError(result.error)
+      } else {
+        var result = await update(value)
+        if (result.error) throw new EvalError(result.error)
         resetForm()
         setRecordForEdit(null)
         setOpenPopup(false)
-      } catch (error) {
-        console.log(error)
       }
+      setLoading(false)
+      resetForm()
+      setRecordForEdit(null)
+      setOpenPopup(false)
+      setNotify({
+        isOpen: true,
+        message: 'Guardado con éxito',
+        type: 'success',
+      })
+      getData()
+    } catch (error) {
+      setNotify({
+        isOpen: true,
+        message: error,
+        type: 'error',
+      })
     }
-    setLoading(false)
-    resetForm()
-    setRecordForEdit(null)
-    setOpenPopup(false)
-    setNotify({
-      isOpen: true,
-      message: 'guardado con éxito',
-      type: 'success',
-    })
   }
 
   const recordEdit = (item) => {
@@ -173,17 +160,16 @@ export default function InquiriesTable() {
     setOpenPopup(true)
   }
 
-  async function onDelete(item) {
+  async function onDelete(value) {
     setLoading(true)
     setConfirmDialog({
       ...confirmDialog,
       isOpen: false,
     })
     try {
-      var response = await deleteData(
-        'https://us-central1-daphtech-31758.cloudfunctions.net/user',
-        item
-      )
+      var result = await remove(value)
+      if (result.error) throw new EvalError(result.error)
+      getData()
     } catch (error) {
       console.log(error)
     }
@@ -194,63 +180,25 @@ export default function InquiriesTable() {
       type: 'success',
     })
   }
-  async function deleteData(url = '', data = {}) {
-    const response = await fetch(url, {
-      method: 'DELETE',
-      headers: {
-        Accept: 'application.json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data), // body data type must match "Content-Type" header
-    })
-    return response.json() // parses JSON response into native JavaScript objects
-  }
-
-  async function updateData(url = '', data = {}) {
-    const response = await fetch(url, {
-      method: 'PUT',
-      headers: {
-        Accept: 'application.json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data), // body data type must match "Content-Type" header
-    })
-    return response.json() // parses JSON response into native JavaScript objects
-  }
-
-  async function postData(url = '', data = {}) {
-    const response = await fetch(url, {
-      method: 'POST', // *GET, POST, PUT, DELETE, etc.
-      //mode: 'cors', // no-cors, *cors, same-origin
-      //cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      //credentials: 'same-origin', // include, *same-origin, omit
-      headers: {
-        Accept: 'application.json',
-        'Content-Type': 'application/json',
-      },
-      //redirect: 'follow', // manual, *follow, error
-      //referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-      body: JSON.stringify(data), // body data type must match "Content-Type" header
-    })
-    return response.json() // parses JSON response into native JavaScript objects
-  }
 
   return (
-    <>
-      <Paper className={classes.pageContent}>
-        <Toolbar sx={{
-            display:"flex",
-            alignItems:"center",
-            justifyContent:"end",
-
-
-            }}>
+    <Box>
+      <Box className={classes.root}>
+        <Toolbar
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            //border: "2px solid forestgreen",
+            width: '100%',
+          }}
+        >
           <Controls.Input
             size="small"
-            label="Buscar usuarios"
+            label="buscar"
             sx={{
               //width: { xs: 400, sm: 280, md: 600, lg: 700 },
-              width: "50%",
+              width: '50%',
             }}
             InputProps={{
               startAdornment: (
@@ -261,35 +209,37 @@ export default function InquiriesTable() {
             }}
             onChange={handleSearch}
           />
-          {/* <Controls.Button
-            variant="outlined"sx={{
+          <Controls.Button
+            variant="outlined"
+            sx={{
               //width: { xs: 400, sm: 280, md: 600, lg: 700 },
               margin: 1,
-
+              width: '7%',
+              paddingLeft: '29px',
             }}
             startIcon={<AddIcon />}
             onClick={() => {
               setOpenPopup(true)
               setRecordForEdit(null)
             }}
-          /> */}
+          />
         </Toolbar>
-        <TblContainer size="small">
+        <TblContainer className={classes.table} size="small">
           <TblHead />
           <TableBody>
             {recordsAfterPagingAndSorting()?.map((item) => (
-              <TableRow key={item.documenttype}>
-
- 
-                 <TableCell>{item.distrito}</TableCell>
+              <TableRow key={item._id}>
+                <TableCell>{item.distrito}</TableCell>
                 <TableCell>{item.fullname}</TableCell>
                 <TableCell>{item.documenttype}</TableCell>
                 <TableCell>{item.documentnumber}</TableCell>
                 <TableCell>{item.email}</TableCell>
-
-
-                {/* <TableCell>{item.role}</TableCell> */}
-                <TableCell>
+                <TableCell
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                  }}
+                >
                   <Controls.ActionButton
                     onClick={async () => {
                       recordEdit(item)
@@ -298,7 +248,7 @@ export default function InquiriesTable() {
                     <EditIcon sx={{ color: '#888e8b' }} />
                   </Controls.ActionButton>
                   <Controls.ActionButton
-                    color="primary"
+                    //color="primary"
                     onClick={() => {
                       setConfirmDialog({
                         isOpen: true,
@@ -310,7 +260,7 @@ export default function InquiriesTable() {
                       })
                     }}
                   >
-                    {/* <DeleteIcon sx={{ color: '#888e8b' }} /> */}
+                    <DeleteIcon sx={{ color: '#888e8b' }} />
                   </Controls.ActionButton>
                 </TableCell>
               </TableRow>
@@ -318,9 +268,9 @@ export default function InquiriesTable() {
           </TableBody>
         </TblContainer>
         <TblPagination />
-      </Paper>
+      </Box>
       <Popup
-        title="Formulario de usuario"
+        title="Formulario plan internet"
         openPopup={openPopup}
         setOpenPopup={setOpenPopup}
       >
@@ -328,7 +278,6 @@ export default function InquiriesTable() {
           recordForEdit={recordForEdit}
           addOrEdit={addOrEdit}
           loading={loading}
-          // roles={roles}
         />
       </Popup>
       <Notification notify={notify} setNotify={setNotify} />
@@ -336,6 +285,6 @@ export default function InquiriesTable() {
         confirmDialog={confirmDialog}
         setConfirmDialog={setConfirmDialog}
       />
-    </>
+    </Box>
   )
 }
